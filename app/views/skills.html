@@ -1,13 +1,13 @@
 <div data-ng-repeat="devskill in devskills | orderBy:'-strenght'">
 	<div class="col-md-4">
 		<div class="row">
-			<div class="col-md-4 panel">
+			<div class="col-md-4">
 				<div class="progresscircle-wrapper">
 					<div class="progresscircle" ng-style="getStyle()">{{devskill.strenght}}%</div>
 					<div
 						round-progress
 						max="100"
-						current="devskill.strenght"
+						current="22"
 						color="#45ccce"
 						bgcolor="#666666"
 						radius="200"
