@@ -1,0 +1,30 @@
+[
+	{
+		"id":"001",
+		"name":"Cavan Handy Man",
+		"description":"Business website was buit on Drupal CMS. Client asked for the best solution with ability to update content anytime he wants.",
+		"image":"cavanhandyman.png",
+		"link":"http://www.cavanhandyman.ie"
+	},
+	{
+		"id":"002",
+		"name":"Cool Gym",
+		"description":"Simple static website. Coded with HTML, CSS and a bit of JavaScript. Purpose of the website to give timetable information, location and other gym related info.",
+		"image":"coolgym.png",
+		"link":"http://www.cool-gym.info"
+	},
+	{
+		"id":"003",
+		"name":"Auto Car Parts",
+		"description":"Temporary website coded until full website is ready. This is an upcoming project.",
+		"image":"automototruckparts.png",
+		"link":"http://www.automototruckparts.ie"
+	},
+	{
+		"id":"004",
+		"name":"Entertainment Website",
+		"description":"Dynamic website built on Drupal 7. Template is coded to meet all requirements. Used only minimal amount of plugins for best performance, so extra functionality was hard coded.",
+		"image":"pramogos.png",
+		"link":"http://www.segris.lt/pramogos"
+	}
+]

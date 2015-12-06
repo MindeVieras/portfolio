@@ -1,0 +1,13 @@
+/* line 2, ../sass/styles.scss */
+.progresscircle-wrapper {
+  position: relative;
+  font-size: 30px;
+}
+
+/* line 6, ../sass/styles.scss */
+.progresscircle {
+  position: absolute;
+  color: #bbb;
+  font-weight: 100;
+  line-height: 1;
+}

@@ -1,0 +1,35 @@
+<div data-ng-repeat="devskill in devskills | orderBy:'-strenght'">
+	<div class="col-md-4">
+		<div class="row">
+			<div class="col-md-4 panel">
+				<div class="progresscircle-wrapper">
+					<div class="progresscircle" ng-style="getStyle()">{{devskill.strenght}}%</div>
+					<div
+						round-progress
+						max="100"
+						current="devskill.strenght"
+						color="#45ccce"
+						bgcolor="#666666"
+						radius="200"
+						semi="false"
+						rounded="false"
+						stroke="50"
+						clockwise="true"
+						responsive="true"
+						duration="1000"
+						animation="easeOutCubic"
+						offset="0">
+
+					</div>
+				</div>
+			</div>
+			<h3 ng-click="showDesc = !showDesc">{{devskill.name}}</h3>
+			<p ng-show="showDesc">{{devskill.description}}</p>
+		</div>
+	</div>
+</div>
+
+<div data-ng-repeat="perskill in perskills">
+	<h2>{{perskill}}</h2>
+</div>
+

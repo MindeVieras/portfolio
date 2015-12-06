@@ -1,0 +1,108 @@
+{
+	"development":[{
+		"name":"HTML",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"99"
+	},{
+		"name":"CSS",
+		"description":"Styling is more than enjoiable.",
+		"strenght":"95"
+	},{
+		"name":"JavaScript",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"55"
+	},{
+		"name":"JQuery",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"75"
+	},{
+		"name":"CLI",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"85"
+	},{
+		"name":"Git",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"88"
+	},{
+		"name":"NPM",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"90"
+	},{
+		"name":"Grunt",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"85"
+	},{
+		"name":"Drupal",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"80"
+	},{
+		"name":"Adobe",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"75"
+	},{
+		"name":"RWD",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"91"
+	},{
+		"name":"XML",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"95"
+	},{
+		"name":"UI Design",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"60"
+	},{
+		"name":"JSON",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"95"
+	},{
+		"name":"Web API",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"77"
+	},{
+		"name":"SASS",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"85"
+	},{
+		"name":"PHP",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"37"
+	},{
+		"name":"MySQL",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"56"
+	},{
+		"name":"MongoDB",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"69"
+	},{
+		"name":"Express.JS",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"50"
+	},{
+		"name":"Node.JS",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"60"
+	},{
+		"name":"Angular.JS",
+		"description":"HTML or HTML5 is easy.",
+		"strenght":"75"
+	}],
+	"personal":[
+		"Full clean UK driving license",
+		"Excellent written and verbal communication skills",
+		"Innovative, always full of new ideas",
+		"Good planning and organization skills",
+		"Giving accurate time estimates of any work to be done",
+		"Extensive technical knowledge and consulting experience",
+		"Working past regular working hours if required",
+		"Ability to work on multiple projects simultaneously",
+		"Excellent team working skills",
+		"Ability to follow complex instructions",
+		"Able to quickly understand complex problems",
+		"Can work efficiently with minimum supervision",
+		"Excellent client facing and presentation skills",
+		"Able to meet tight deadlines",
+		"Superior attention to detail"
+	]
+}

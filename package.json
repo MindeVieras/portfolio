@@ -1,0 +1,19 @@
+{
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "name": "Collage",
+  "version": "0.1.0",
+  "repository": "https://github.com/MindeVieras/collage.git",
+  "author": "Minde Vieras <mindevieras@gmail.com>",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-compass": "~1.0.4",
+    "grunt-contrib-connect": "~0.11.2",
+    "grunt-contrib-cssmin": "~0.14.0",
+    "grunt-contrib-uglify": "~0.10.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-jslint": "~1.1.14"
+  },
+  "license": "MIT"
+}
