@@ -6,7 +6,8 @@ angular.module('myApp', [
   'myApp.main',
   'myApp.projects',
   'myApp.skills'
-]).
-config(['$routeProvider', function($routeProvider) {
+])
+
+.config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/'});
 }]);

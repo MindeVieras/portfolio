@@ -1,13 +1,22 @@
 /* line 2, ../sass/styles.scss */
-.progresscircle-wrapper {
+.devskills .progresscircle-wrapper {
   position: relative;
-  font-size: 30px;
+  font-size: 24px;
+}
+/* line 6, ../sass/styles.scss */
+.devskills h3 {
+  cursor: pointer;
 }
 
-/* line 6, ../sass/styles.scss */
+/* line 10, ../sass/styles.scss */
 .progresscircle {
   position: absolute;
   color: #bbb;
   font-weight: 100;
   line-height: 1;
+}
+
+/* line 16, ../sass/styles.scss */
+.personal-skills li {
+  text-align: center;
 }

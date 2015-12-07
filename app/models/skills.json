@@ -66,12 +66,12 @@
 				"name":"php",
 				"nicename":"PHP",
 				"description":"HTML or HTML5 is easy.",
-				"strenght":"99"
+				"strenght":"25"
 			},{
 				"name":"mysql",
 				"nicename":"MySQL",
 				"description":"Styling is more than enjoiable.",
-				"strenght":"95"
+				"strenght":"50"
 			}
 		]
 	},{	

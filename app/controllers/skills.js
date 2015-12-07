@@ -15,8 +15,8 @@ angular.module('myApp.skills', ['ngRoute', 'angular-svg-round-progress'])
 	.then(function(response) {
           $scope.devskills = response.data.development;
 		  $scope.perskills = response.data.personal;
-	})
-    $scope.getStyle = function(){
+	});
+    $scope.getStylePercent = function(){
 		var transform = ($scope.isSemi ? '' : 'translateY(-50%) ') + 'translateX(-50%)';
 		return {
 			'top': $scope.isSemi ? 'auto' : '50%',
