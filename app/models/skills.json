@@ -13,8 +13,8 @@
 			},{
 				"name":"js",
 				"nicename":"JavaScript",
-				"description":"HTML or HTML5 is easy.",
-				"strenght":"55"
+				"description":"Raw JS is always a competition. Endless story to learn it all.",
+				"strenght":"60"
 			},{
 				"name":"jq",
 				"nicename":"JQuery",
@@ -38,8 +38,8 @@
 			},{
 				"name":"rwd",
 				"nicename":"RWD",
-				"description":"HTML or HTML5 is easy.",
-				"strenght":"91"
+				"description":"All my projects comes with responsive website design.",
+				"strenght":"90"
 			}
 		]
 	},{	

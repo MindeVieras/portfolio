@@ -14,6 +14,5 @@ angular.module('myApp.projects', ['ngRoute'])
 	$http.get('models/projects.json')
 	.then(function(response) {
           $scope.projects = response.data;
-		  console.log($scope.projects);
 	})
 }]);

@@ -20,3 +20,13 @@
 .personal-skills li {
   text-align: center;
 }
+
+/* line 19, ../sass/styles.scss */
+.single-skill {
+  padding: 10px 0px;
+}
+
+/* line 22, ../sass/styles.scss */
+footer {
+  clear: both;
+}
