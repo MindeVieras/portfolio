@@ -1,0 +1,207 @@
+body {
+  background: no-repeat center center fixed;
+  background-image: url(../images/bg/c0.jpg);
+  background-size: cover;
+  overflow: hidden;
+  margin: 0px; }
+
+svg g {
+  cursor: pointer; }
+  svg g path, svg g circle {
+    opacity: .4;
+    transition: opacity .3s ease; }
+  svg g:hover path {
+    opacity: .1; }
+  svg g:hover circle {
+    opacity: .1; }
+  svg g text {
+    font-weight: lighter;
+    font-family: "Play", sans-serif;
+    fill: rgba(204, 200, 200, 0.5); }
+
+.modal .modal-content {
+  background-color: rgba(204, 204, 204, 0.7);
+  font-family: Helvetica;
+  letter-spacing: 1px;
+  color: #000;
+  border-radius: 30px;
+  padding: 10px; }
+  .modal .modal-content .modal-header {
+    background-color: rgba(204, 204, 204, 0.5);
+    border-radius: 20px 20px 0 0; }
+  .modal .modal-content .modal-body {
+    background-color: rgba(204, 204, 204, 0.5);
+    font-size: 1.25em; }
+    .modal .modal-content .modal-body .list-group-item {
+      background-color: transparent;
+      border: none; }
+  .modal .modal-content .modal-footer {
+    background-color: rgba(204, 204, 204, 0.5);
+    border-radius: 0 0 20px 20px; }
+    .modal .modal-content .modal-footer i {
+      margin-right: 10px;
+      font-size: 18px;
+      vertical-align: middle; }
+    .modal .modal-content .modal-footer a {
+      text-decoration: none;
+      color: #000; }
+
+.modal.skills .modal-content {
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 1em; }
+  .modal.skills .modal-content .modal-header {
+    display: none; }
+  .modal.skills .modal-content .modal-body {
+    background-color: transparent;
+    padding: 0px 15px; }
+    .modal.skills .modal-content .modal-body .panel {
+      margin-bottom: 10px;
+      background-color: transparent; }
+      .modal.skills .modal-content .modal-body .panel .panel-heading {
+        background-color: transparent;
+        border-color: transparent; }
+      .modal.skills .modal-content .modal-body .panel .panel-body {
+        background-color: rgba(204, 204, 204, 0.5);
+        border-radius: 20px;
+        font-size: 0.75em; }
+    .modal.skills .modal-content .modal-body .panel-info {
+      border-color: transparent; }
+      .modal.skills .modal-content .modal-body .panel-info.personal .panel-body {
+        font-size: 1em; }
+    .modal.skills .modal-content .modal-body .list-group-item {
+      background-color: transparent;
+      border: none; }
+  .modal.skills .modal-content .modal-footer {
+    background-color: transparent;
+    border-top: 0px solid black;
+    padding-top: 0px; }
+
+.modal-title, .panel-title {
+  color: #151515;
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: 5px; }
+
+.modal.projects .modal-content .modal-body {
+  padding: 0px 15px; }
+  .modal.projects .modal-content .modal-body .panel {
+    margin-bottom: 0px;
+    background-color: transparent; }
+    .modal.projects .modal-content .modal-body .panel .panel-heading {
+      background-color: transparent;
+      border-color: transparent;
+      color: #000;
+      font-size: 1.5em;
+      text-align: center; }
+    .modal.projects .modal-content .modal-body .panel .panel-body {
+      background-color: transparent;
+      border-radius: 20px; }
+      .modal.projects .modal-content .modal-body .panel .panel-body img {
+        width: 100%;
+        margin-bottom: 10px; }
+  .modal.projects .modal-content .modal-body .panel-info {
+    border-color: transparent; }
+  .modal.projects .modal-content .modal-body .list-group-item {
+    background-color: transparent;
+    border: none; }
+
+.modal.cv .get-cv, .modal.cv .get-cover {
+  text-align: center; }
+.modal.cv form {
+  display: inline-block; }
+  .modal.cv form .btn-default {
+    background-color: rgba(204, 204, 204, 0.5); }
+
+.close {
+  font-size: 2.5em; }
+
+.certs {
+  font-weight: 700; }
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center; }
+  footer a:hover i {
+    bottom: 5px; }
+  footer i {
+    position: relative;
+    bottom: 0;
+    color: rgba(204, 204, 204, 0.5);
+    font-size: 48px !important;
+    margin: 0 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+
+.devskills .progresscircle-wrapper {
+  position: relative; }
+.devskills .skill-name {
+  font-size: 1.25em;
+  text-align: center; }
+  .devskills .skill-name span {
+    display: inline-block;
+    margin-top: 5px; }
+
+.progresscircle {
+  position: absolute;
+  color: #000;
+  font-weight: 100;
+  line-height: 1; }
+
+.round-progress-wrapper {
+  display: block;
+  margin: auto;
+  text-align: center;
+  width: 80% !important;
+  padding-bottom: 40% !important; }
+
+.personal-skills li {
+  text-align: center; }
+
+.skill {
+  padding-left: 0px;
+  padding-right: 0px; }
+
+.single-skill {
+  padding: 10px 0px; }
+
+.single-skill + .popover {
+  width: 280px; }
+
+.single-skill + .popover > .popover-inner {
+  background-color: rgba(204, 204, 204, 0.85);
+  font-size: 1em; }
+
+.popover.top {
+  margin-top: -40px; }
+
+.popover.top > .arrow:after {
+  border-top-color: rgba(204, 204, 204, 0.85); }
+
+footer .popover > .popover-inner {
+  background-color: rgba(204, 204, 204, 0.85);
+  font-size: 1em; }
+
+.popover {
+  background-color: transparent; }
+
+.error {
+  background-color: rgba(255, 0, 0, 0.2); }
+
+.submissionMessage {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  padding: 12px;
+  text-align: center;
+  display: block;
+  box-shadow: 0 0 2px white;
+  width: 60%; }
+
+/*# sourceMappingURL=styles.css.map */

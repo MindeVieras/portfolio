@@ -1,0 +1,59 @@
+[
+	{
+		"id":"001",
+		"name":"Portfolio",
+		"description":"Unique Single Page Application made by SVG and AngularJS. All data is saved in json files, MVC pattern used. Fully responsive for any device is in use.",
+		"image":"mindelis.png",
+		"link":"http://mindelis.com"
+	},
+	{
+		"id":"002",
+		"name":"Segris",
+		"description":"Redesigned the Opencart online shop. Great considerable efforts made for the major development of website design, layout and responsiveness achieved.",
+		"image":"segris.png",
+		"link":"http://e.segris.lt"
+	},
+	{
+		"id":"003",
+		"name":"Entertainment",
+		"description":"Dynamic website built by Drupal 7. Template is coded in order to meet client’s requirements. To boost the best performance criteria used only the minimum of plugins and extra functionality was hard coded.",
+		"image":"pramogos.png",
+		"link":"http://www.segris.lt/pramogos"
+		
+	},
+	{
+		"id":"004",
+		"name":"Sodas",
+		"description":"Private small Business website created using Wordpress. Design was provided by the client from wix.com. In order to meet all client needs WP was suggested as CMS for ability to make the content updates at any time possible.",
+		"image":"sodas.png",
+		"link":"http://supersodyba.lt/en"
+	},
+	{
+		"id":"005",
+		"name":"ProPvCleaning",
+		"description":"Private business website built by using Wordpress. Client query fulfilled to seek the best solutions possible with ability to edit the content at any time.",
+		"image":"proclean.png",
+		"link":"http://propvcleaning.co.uk"
+	},
+	{
+		"id":"006",
+		"name":"Food & Drink",
+		"description":"Main goal and purpose achieved to create fully responsive eye catchy website. Drupal template design used with PS design provided.",
+		"image":"fand.png",
+		"link":"http://www.foodanddrinkguides.co.uk/"
+	},
+	{
+		"id":"007",
+		"name":"Futures Centre",
+		"description":"Costumers share their opinions and make comments based on their experiences. Website created by Drupal using responsive PS designs. Massive load of frontend and backend functionality is prepared. Overall amazing look and feel UI/UX achieved.",
+		"image":"fftf.png",
+		"link":"http://thefuturescenter.org"
+	},
+	{
+		"id":"008",
+		"name":"Jovaitas",
+		"description":"The latest freelance project built by Drupal Commerce. Design and functionality was created in order to meet all client requirements.",
+		"image":"jovaitas.png",
+		"link":"http://e.jovaitas.lt"
+	}
+]
