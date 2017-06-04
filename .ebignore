@@ -4,9 +4,14 @@ Thumbs.db
 # Mac crap
 .DS_Store
 
+*.map
+
+.git
+.gitignore
+
 .sass-cache
 
-*.map
+sass
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
