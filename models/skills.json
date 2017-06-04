@@ -11,6 +11,11 @@
 				"description":"Angular is my favorite frontend framework.",
 				"strenght":"45"
 			},{
+				"name":"reactjs",
+				"nicename":"React.JS",
+				"description":"React is my latest frontend language.",
+				"strenght":"50"
+			},{
 				"name":"js",
 				"nicename":"JavaScript",
 				"description":"Raw JS is always a competition. Endless possibilities.",
@@ -70,13 +75,33 @@
 			},{
 				"name":"php",
 				"nicename":"PHP",
-				"description":"I know enough of PHP to modify sites.",
-				"strenght":"75"
+				"description":"My first and also my favorite language.",
+				"strenght":"85"
 			},{
 				"name":"mysql",
 				"nicename":"MySQL",
 				"description":"SQL is great relational database.",
-				"strenght":"65"
+				"strenght":"75"
+			},{
+				"name":"drupal",
+				"nicename":"Drupal CMS",
+				"description":"When it comes to CMS, Drupal 7 is my choise.",
+				"strenght":"85"
+			},{
+				"name":"wordpress",
+				"nicename":"Wordpress",
+				"description":"Smaller sites that requires CMS are powered by Wordpress.",
+				"strenght":"80"
+			},{
+				"name":"magento",
+				"nicename":"Magento",
+				"description":"This online shop CMS is highly customizable and in use for high trafic sites.",
+				"strenght":"60"
+			},{
+				"name":"customcms",
+				"nicename":"Custom CMS",
+				"description":"Custom CMS can be also build, with specific functionality.",
+				"strenght":"90"
 			}
 		]
 	},{	
@@ -100,20 +125,20 @@
 				"description":"I love this tool since first day. I use it all the time",
 				"strenght":"80"
 			},{
-				"name":"drupal",
-				"nicename":"Drupal CMS",
-				"description":"When it comes to CMS, Drupal 7 is my choise.",
-				"strenght":"85"
-			},{
 				"name":"adobe",
 				"nicename":"AdobeCS",
 				"description":"Good understanding and knowledge of Adobe Tools.",
 				"strenght":"75"
 			},{
-				"name":"rest",
-				"nicename":"RESTful",
-				"description":"HTTP req/res with ExpressJS and AngularJS.",
-				"strenght":"55"
+				"name":"webservices",
+				"nicename":"Webservices",
+				"description":"HTTP calls using RESTful and SOAP clients.",
+				"strenght":"90"
+			},{
+				"name":"aws",
+				"nicename":"AWS",
+				"description":"Amazon Web Services.",
+				"strenght":"70"
 			}
 		]
 	}],
@@ -126,9 +151,7 @@
 	"Excellent team working skills",
 	"Ability to follow complex instructions",
 	"Can work efficiently with minimum supervision",
-	"Customer focused",
 	"Excellent presentation skills",
-	"Superior attention to detail",
-	"Full clean UK driving license"
+	"Superior attention to detail"
 ]
 }
