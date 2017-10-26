@@ -1,14 +1,12 @@
-# Windows image file caches
-Thumbs.db
 
-# Mac crap
+/dist
+
+node_modules
+bower_components
+
+Thumbs.db
 .DS_Store
 
 .sass-cache
 
 *.map
-
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
