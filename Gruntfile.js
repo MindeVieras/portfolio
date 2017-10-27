@@ -44,48 +44,31 @@ module.exports = function(grunt) {
           dev: {
             src: [
               './bower_components/jquery/dist/jquery.js',
-              // './bower_components/owl.carousel/dist/owl.carousel.js',
-              // './bower_components/slick-carousel/slick/slick.js',
-              // './bower_components/angular/angular.js',
-              // './bower_components/angular-route/angular-route.js',
-              // './bower_components/ngmap/build/scripts/ng-map.js',
-              // './bower_components/v-accordion/dist/v-accordion.js',
-              // './bower_components/angular-slick-carousel/dist/angular-slick.js'
+              './bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js',
+              './bower_components/angular/angular.js',
+              './bower_components/angular-route/angular-route.js',
+              './bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
+              './bower_components/angular-svg-round-progressbar/build/roundProgress.js',
               './src/app.js',
               './src/controllers/*.js'
             ],
-            dest: './src/js/scripts.js'
-          },
+            dest: './src/js/app.js'
+          }
         },
         uglify: {
             prod: {
                 files: {
-                    './dist/js/scripts.js': [
-                        './src/js/scripts.js'
+                    './dist/js/app.js': [
+                        './src/js/app.js'
                     ]
                 },
                 options: {
                     mangle: false,
-                    // compress: {
-                    //     drop_console: true
-                    // },
+                    compress: {
+                        drop_console: true
+                    },
                     compress: true,
                     sourceMap: false
-                }
-            },
-            libs: {
-                files: {
-                    './app/js/libs.min.js': [
-                        './app/js/libs.js'
-                    ]
-                },
-                options: {
-                    mangle: true,
-                    // compress: {
-                    //     drop_console: true
-                    // },
-                    compress: true,
-                    sourcemap: false
                 }
             }
         },
@@ -93,12 +76,12 @@ module.exports = function(grunt) {
             html: {
                 files: ['./src/**/*.html']
             },
-            // js: {
-            //     files: ['./app/scripts/**/*.js'],
-            //     tasks : [
-            //         'uglify:app'
-            //     ]
-            // },
+            js: {
+                files: ['./src/app.js', './src/controllers/**/*.js'],
+                tasks : [
+                    'concat'
+                ]
+            },
             sass: {
                 files: ['./src/sass/**/*.scss'],
                 tasks: [
@@ -122,8 +105,6 @@ module.exports = function(grunt) {
     grunt.registerTask('default', [
         'sass',
         'concat',
-        // 'uglify:libs',
-        // 'uglify:app',
         'watch'
     ]);
     grunt.registerTask('build', [
@@ -131,7 +112,7 @@ module.exports = function(grunt) {
         'sass',
         'cssmin',
         'concat',
-        'uglify:prod'
+        'uglify'
     ]);
 
 };

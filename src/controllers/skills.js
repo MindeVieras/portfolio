@@ -1,4 +1,3 @@
-'use strict';
 
 angular.module('myApp.skills', ['angular-svg-round-progress', 'ui.bootstrap'])
 
