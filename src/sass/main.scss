@@ -1,45 +1,16 @@
-// @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
-$font-main: Helvetica;
-$font-main-link: 'Play', sans-serif;
+@import "base/mixins";
 
-@mixin transition($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
-}
+@import "components/pizza";
 
 body {
   background: no-repeat center center fixed;
-  background-image: url('/images/bg.jpg');
+  // background-image: url('/images/bg.jpg');
   background-size: cover;
   overflow: hidden;
   margin: 0px;
 }
 
-svg{
-    g{
-        cursor:pointer;
-        path, circle{
-            opacity: .4;
-            transition: opacity .3s ease;
-        }
-        &:hover path{
-            opacity:.1;
-
-        }
-        &:hover circle{
-            opacity: .1;
-        }
-        text{
-            font-weight: lighter;
-            font-family: $font-main-link;
-            fill: rgba(204,200,200,.5);
-        }
-    }
-}
 .modal{
     .modal-content{
         background-color: rgba(204,204,204,.7);

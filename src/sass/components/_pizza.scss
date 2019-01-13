@@ -1,0 +1,27 @@
+
+#pizza_svg {
+
+  .pizza-piece {
+    cursor: pointer;
+
+    path, circle{
+      opacity: .4;
+      transition: opacity .3s ease;
+    }
+
+    &:hover path{
+      opacity:.1;
+
+    }
+
+    &:hover circle{
+      opacity: .1;
+    }
+    
+    text{
+      font-weight: lighter;
+      font-family: $font-main-link;
+      fill: rgba(204,200,200,.5);
+    }
+  }
+}

@@ -1,6 +1,9 @@
 
 $space: 8px;
 
+$font-main: Helvetica;
+$font-main-link: 'Play', sans-serif;
+
 // Font to em's function
 $browser-context: 16;
 @function em($pixels, $context: $browser-context) {
