@@ -1,4 +1,6 @@
 
+import slugify from 'slugify'
+
 class Pizza {
 
   constructor(svgWidth, svgHeight, svgId) {
@@ -10,14 +12,14 @@ class Pizza {
     this.svgLinkNamespaceURI = 'http://www.w3.org/1999/xlink'
     this.pieceClassName = 'pizza-piece'
     this.pizzaSVG = document.getElementById(svgId)
+    this.currentPieces = document.getElementsByClassName(this.pieceClassName)
   }
 
   draw() {
 
-    // Firstly remove old pieces
-    const oldPieces = document.getElementsByClassName(this.pieceClassName)
-    while(oldPieces.length > 0){
-      oldPieces[0].parentNode.removeChild(oldPieces[0])
+    // Firstly remove current pieces
+    while(this.currentPieces.length > 0){
+      this.currentPieces[0].parentNode.removeChild(this.currentPieces[0])
     }
 
     // Now set global pizza variables
@@ -54,6 +56,9 @@ class Pizza {
           centerTitle  = document.createElementNS(this.svgNamespaceURI, 'title'),
           centerImage  = document.createElementNS(this.svgNamespaceURI, 'image'),
           centerCircle = document.createElementNS(this.svgNamespaceURI, 'circle')
+
+    // Add group click
+    centerGroup.addEventListener('click', () => this.onPieceClick('skills'))
 
     // Add group class name
     centerGroup.classList.add(this.pieceClassName)
@@ -186,7 +191,10 @@ class Pizza {
             pieceTitle = document.createElementNS(this.svgNamespaceURI, 'title'),
             pieceText  = document.createElementNS(this.svgNamespaceURI, 'text'),
             piecePath  = document.createElementNS(this.svgNamespaceURI, 'path')
-      
+
+      // Add group click
+      pieceGroup.addEventListener('click', () => this.onPieceClick(slugify(name.toLowerCase(), '_')))
+
       const text = document.createTextNode(name)
 
       // Add group class name and text size
@@ -221,6 +229,14 @@ class Pizza {
       this.pizzaSVG.appendChild(pieceGroup)
     })
 
+  }
+
+  onPieceClick(id) {
+
+    if (typeof id === 'string' || id instanceof String) {
+      $(`#modal_${id}`).modal()
+    }
+    return
   }
 
 }

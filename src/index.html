@@ -48,15 +48,6 @@
   <div id="main_wrapper" style="opacity:0;">
     
     <svg id="pizza_svg" width="0" height="0">
-      
-      <!-- <g id="pizza_skills" data-target="skills" class="pizza-piece">
-        <image xlink:href="images/logo.png" ng-attr-x="{{centerW-(logoSize/2)}}" ng-attr-y="{{centerH-(logoSize/2)}}" ng-attr-height="{{logoSize}}" ng-attr-width="{{logoSize}}"/>
-        <title>Skills</title>
-        <circle ng-attr-cx="{{centerW}}" 
-            ng-attr-cy="{{centerH}}" 
-            ng-attr-r="{{rCircle}}"
-            fill="#333333" />
-      </g> -->
   
 
             <!-- <defs>
@@ -84,197 +75,261 @@
         </text> -->
         
     </svg>
-  
-    <div class="modal skills fade" tabindex="-1" role="dialog" aria-labelledby="skillsLabel">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
+
+    <div class="modal fade" id="modal_skills" tabindex="-1" role="dialog" aria-labelledby="skillsLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          
+          <div class="modal-header">
+            <h5 class="modal-title" id="skillsLabel">Skills</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
             
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="skillsLabel">Skills</h4>
-              </div>
-              
-              <div class="modal-body" ng-controller="skillsCtrl">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <div class="panel panel-info" data-ng-repeat="devskill in devskills">
-                  <div class="panel-heading">
-                <div class="panel-title">{{devskill.catnicename}}</div>
-              </div>
-              <div class="panel-body devskills">
-                <div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'">
-                  <div class="col-md-2 col-xs-6 skill">
-                    <div uib-popover="{{skill.description}}" popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill">
-                      <div class="col-md-12 col-xs-6">
-                        <div class="progresscircle-wrapper">
-                          <div class="progresscircle"></div>
-                          <div
-                            round-progress
-                            max="100"
-                            current="skill.strenght"
-                            color="rgba(80,80,80,1)"
-                            bgcolor="rgba(120,120,120,.25)"
-                            radius="200"
-                            semi="true"
-                            rounded="false"
-                            stroke="200"
-                            clockwise="true"
-                            responsive="true"
-                            duration="1000"
-                            animation="easeOutCubic"
-                            offset="0">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="skill-name">
-                        <span>{{skill.nicename}}</span>
+          <div class="modal-body" ng-controller="skillsCtrl">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="panel panel-info" data-ng-repeat="devskill in devskills">
+              <div class="panel-heading">
+            <div class="panel-title">{{devskill.catnicename}}</div>
+          </div>
+          <div class="panel-body devskills">
+            <div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'">
+              <div class="col-md-2 col-xs-6 skill">
+                <div uib-popover="{{skill.description}}" popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill">
+                  <div class="col-md-12 col-xs-6">
+                    <div class="progresscircle-wrapper">
+                      <div class="progresscircle"></div>
+                      <div
+                        round-progress
+                        max="100"
+                        current="skill.strenght"
+                        color="rgba(80,80,80,1)"
+                        bgcolor="rgba(120,120,120,.25)"
+                        radius="200"
+                        semi="true"
+                        rounded="false"
+                        stroke="200"
+                        clockwise="true"
+                        responsive="true"
+                        duration="1000"
+                        animation="easeOutCubic"
+                        offset="0">
                       </div>
                     </div>
+                  </div>
+                  <div class="skill-name">
+                    <span>{{skill.nicename}}</span>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div class="panel panel-info personal">
+          <div class="panel-heading">
+            <div class="panel-title">Personal skills</div>
+          </div>
+          <div class="panel-body">
+            <ul class="list-group row personal-skills">
+              <li class="list-group-item col-xs-12" data-ng-repeat="perskill in perskills">{{perskill}}</li>
+            </ul>
+          </div>
+        </div>
+
+          </div>
+          
+          <div class="modal-footer">
+            <a href="tel:=+447743499249" class="float-left">
+              <i class="fa fa-mobile"></i><span class="sr-only">Mobile</span>
+              07743499249
+            </a>
+            <a href="mailto:minde@mindelis.com">
+              <i class="fa fa-envelope"></i><span class="sr-only">Email</span>
+              minde@mindelis.com
+            </a>
+          </div>
+        
+        </div>
+      </div>
+    </div>
   
-            <div class="panel panel-info personal">
-              <div class="panel-heading">
-                <div class="panel-title">Personal skills</div>
-              </div>
-              <div class="panel-body">
-                <ul class="list-group row personal-skills">
-                  <li class="list-group-item col-xs-12" data-ng-repeat="perskill in perskills">{{perskill}}</li>
+    <div class="modal fade" id="modal_summary" tabindex="-1" role="dialog" aria-labelledby="summaryLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          
+          <div class="modal-header">
+            <h5 class="modal-title" id="summaryLabel">Summary</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+            
+          <div class="modal-body">
+            <p>Motivated experienced Web Developer seeking a career in a dynamic software development team. Highly competent front-end development skills, with an emphasis on JavaScript and its libraries (ReactJS, jQuery). Confident back-end development skills, especially using PHP and NodeJS.</p>
+            <p>Self-taught, with a real interest in keeping up-to-date with the latest web standards, languages and methods. Makes extensive use of tools such as Git, Webpack, Grunt to boost productivity and achieve the best results possible. A deep understanding of how computers and the internet works. High level of technical and networking skills.</p>
+          </div>
+            
+          <div class="modal-footer">
+            <a href="tel:=+447743499249" class="float-left">
+              <i class="fa fa-mobile"></i><span class="sr-only">Mobile</span>
+              07743499249
+            </a>
+            <a href="mailto:minde@mindelis.com">
+              <i class="fa fa-envelope"></i><span class="sr-only">Email</span>
+              minde@mindelis.com
+            </a>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  
+    <div class="modal fade" id="modal_projects" tabindex="-1" role="dialog" aria-labelledby="projectsLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectsLabel">Projects</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <ul class="list-unstyled">
+
+              <li class="media">
+                <a href="http://e.jovaitas.lt" target="_blank">
+                  <img src="/images/jovaitas.png" class="mr-3" alt="Jovaitas" />
+                </a>
+                <div class="media-body">
+                  <h5 class="mt-0">Jovaitas</h5>
+                  The latest freelance project built by Drupal Commerce. Design and functionality was created in order to meet all client requirements.
+                  <a href="http://e.jovaitas.lt" target="_blank">Go to site...</a>
+                </div>
+              </li>
+
+              <li class="media">
+                <a href="http://thefuturescenter.org" target="_blank">
+                  <img src="/images/fftf.png" class="mr-3" alt="Futures Centre" />
+                </a>
+                <div class="media-body">
+                  <h5 class="mt-0">Futures Centre</h5>
+                  Costumers share their opinions and make comments based on their experiences. Website created by Drupal using responsive PS designs. Massive load of frontend and backend functionality is prepared. Overall amazing look and feel UI/UX achieved.
+                  <a href="http://thefuturescenter.org" target="_blank">Go to site...</a>
+                </div>
+              </li>
+
+              <li class="media">
+                <a href="http://www.foodanddrinkguides.co.uk" target="_blank">
+                  <img src="/images/fand.png" class="mr-3" alt="Food & Drink" />
+                </a>
+                <div class="media-body">
+                  <h5 class="mt-0">Food & Drink</h5>
+                  Main goal and purpose achieved to create fully responsive eye catchy website. Drupal template design used with PS design provided.
+                  <a href="http://www.foodanddrinkguides.co.uk" target="_blank">Go to site...</a>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="modal-footer">
+            <a href="tel:=+447743499249" class="float-left">
+              <i class="fa fa-mobile"></i><span class="sr-only">Mobile</span>
+              07743499249
+            </a>
+            <a href="mailto:minde@mindelis.com">
+              <i class="fa fa-envelope"></i><span class="sr-only">Email</span>
+              minde@mindelis.com
+            </a>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  
+    <div class="modal fade" id="modal_experience" tabindex="-1" role="dialog" aria-labelledby="experienceLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          
+          <div class="modal-header">
+            <h5 class="modal-title" id="experienceLabel">Experience</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+            
+          <div class="modal-body">
+
+            <div class="row">
+              <div class="col-xs-12">
+                <b>01/16 – 10/16</b> web developer at digital agency <b>Southmedia Ltd.</b> Bristol.
+                <ul>
+                  <li>Responsible for front and backend development of both Wordpress and Drupal websites.</li>
+                  <li>Typically working from designs, but often given free rein on improving existing websites.</li>
+                  <li>Whether working individually or with a small team - constantly striving to operate within timescales and hit targets.</li>
                 </ul>
               </div>
             </div>
-  
-              </div>
-              
-              <div modal-footer></div>
-          
-          </div>
-        </div>
-    </div>
-  
-    <div class="modal summary fade" tabindex="-1" role="dialog" aria-labelledby="summaryLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
             
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="summaryLabel">Summary</h4>
-              </div>
-              
-              <div class="modal-body">
-                <p>Motivated experienced Web Developer seeking a career in a dynamic software development team. Highly competent front-end development skills, with an emphasis on JavaScript and its libraries (ReactJS, jQuery). Confident back-end development skills, especially using PHP and NodeJS.</p>
-                <p>Self-taught, with a real interest in keeping up-to-date with the latest web standards, languages and methods. Makes extensive use of tools such as Git, Webpack, Grunt to boost productivity and achieve the best results possible. A deep understanding of how computers and the internet works. High level of technical and networking skills.</p>
-              </div>
-              
-          <div modal-footer></div>
-          
-          </div>
-        </div>
-    </div>
-  
-    <div class="modal projects fade" tabindex="-1" role="dialog" aria-labelledby="projectsLabel">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="projectsLabel">Projects</h4>
-              </div>
-              
-              <div class="modal-body" ng-controller="projectsCtrl">
-                <div class="panel panel-info">
-              <div class="panel-body">
-                <div data-ng-repeat="project in projects|orderBy:'-id'">
-                  <div class="col-xs-12">
-                    <h2>{{project.name}}</h2>
-                    <div class="row">
-                      <div class="col-lg-4 col-xs-12">
-                        <a href="{{project.link}}" target="_blank"><img ng-src="images/{{project.image}}"></a>
-                      </div>
-                      <div class="col-xs-7">
-                        <p>{{project.description}}</p>
-                        <a href="{{project.link}}" target="_blank">Go to site...</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <b>03/13 – 12/15 freelancing web designer/developer.</b>
+                <ul>
+                  <li>Creating websites with Drupal 7 CMS, developing themes and modules.</li>
+                  <li>Building SPA with AngularJS.</li>
+                  <li>Maintaining already build systems.</li>
+                  <li>Constantly working with HTML, CSS and JS.</li>
+                  <li>Experience with MVC pattern.</li>
+                  <li>Creating design with Adobe tools.</li>
+                </ul>
               </div>
             </div>
+        
+            <div class="row">
+              <div class="col-xs-12">
+                <b>06/10 – 12/12 Leader, developer. Electric-Shop-Online, Lithuania.</b>
+                <ul>
+                  <li>Responsible for communicating with customers.</li>
+                  <li>Selling and advertising digital goods.</li>
+                  <li>Maintaining the main online store.</li>
+                  <li>Repairing, installing and maintaining consumer grade digital equipment.</li>
+                </ul>
               </div>
-              
-          <div modal-footer></div>
-          
+            </div>
+
           </div>
+          
+          <div class="modal-footer">
+            <a href="tel:=+447743499249" class="float-left">
+              <i class="fa fa-mobile"></i><span class="sr-only">Mobile</span>
+              07743499249
+            </a>
+            <a href="mailto:minde@mindelis.com">
+              <i class="fa fa-envelope"></i><span class="sr-only">Email</span>
+              minde@mindelis.com
+            </a>
+          </div>
+        
         </div>
+      </div>
     </div>
   
-    <div class="modal experience fade" tabindex="-1" role="dialog" aria-labelledby="experienceLabel">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="experienceLabel">Experience</h4>
-              </div>
-              
-              <div class="modal-body">
-  
-                <div class="row">
-                  <div class="col-xs-12">
-                    <b>01/16 – 10/16</b> web developer at digital agency <b>Southmedia Ltd.</b> Bristol.
-                    <ul>
-                      <li>Responsible for front and backend development of both Wordpress and Drupal websites.</li>
-                      <li>Typically working from designs, but often given free rein on improving existing websites.</li>
-                      <li>Whether working individually or with a small team - constantly striving to operate within timescales and hit targets.</li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div class="row">
-                  <div class="col-xs-12">
-                    <b>03/13 – 12/15 freelancing web designer/developer.</b>
-                    <ul>
-                      <li>Creating websites with Drupal 7 CMS, developing themes and modules.</li>
-                      <li>Building SPA with AngularJS.</li>
-                      <li>Maintaining already build systems.</li>
-                      <li>Constantly working with HTML, CSS and JS.</li>
-                      <li>Experience with MVC pattern.</li>
-                      <li>Creating design with Adobe tools.</li>
-                    </ul>
-                  </div>
-                </div>
-            
-                <div class="row">
-                  <div class="col-xs-12">
-                    <b>06/10 – 12/12 Leader, developer. Electric-Shop-Online, Lithuania.</b>
-                    <ul>
-                      <li>Responsible for communicating with customers.</li>
-                      <li>Selling and advertising digital goods.</li>
-                      <li>Maintaining the main online store.</li>
-                      <li>Repairing, installing and maintaining consumer grade digital equipment.</li>
-                    </ul>
-                  </div>
-                </div>
-  
-              </div>
-              
-              <div modal-footer></div>
+    <div class="modal fade" id="modal_expertise" tabindex="-1" role="dialog" aria-labelledby="expertiseLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
           
+          <div class="modal-header">
+            <h5 class="modal-title" id="expertiseLabel">Expertise</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-        </div>
-    </div>
-  
-    <div class="modal expertize fade" tabindex="-1" role="dialog" aria-labelledby="expertizeLabel">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
             
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="expertizeLabel">Expertise</h4>
-              </div>
-              
-              <div class="modal-body">
+          <div class="modal-body">
             <ul class="list-group row">
               <li class="list-group-item col-md-4 col-xs-6">Time planning</li>
               <li class="list-group-item col-md-4 col-xs-6">Code quality</li>
@@ -286,24 +341,35 @@
               <li class="list-group-item col-md-4 col-xs-6">Automation tools</li>
               <li class="list-group-item col-md-4 col-xs-6">Mobile devices</li>
             </ul>
-              </div>
-              
-              <div modal-footer></div>
-          
           </div>
+            
+          <div class="modal-footer">
+            <a href="tel:=+447743499249" class="float-left">
+              <i class="fa fa-mobile"></i><span class="sr-only">Mobile</span>
+              07743499249
+            </a>
+            <a href="mailto:minde@mindelis.com">
+              <i class="fa fa-envelope"></i><span class="sr-only">Email</span>
+              minde@mindelis.com
+            </a>
+          </div>
+        
         </div>
+      </div>
     </div>
   
-    <div class="modal education fade" tabindex="-1" role="dialog" aria-labelledby="educationLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
+    <div class="modal fade" id="modal_education" tabindex="-1" role="dialog" aria-labelledby="educationLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          
+          <div class="modal-header">
+            <h5 class="modal-title" id="educationLabel">Education</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
             
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="educationLabel">Education</h4>
-              </div>
-              
-              <div class="modal-body">
+          <div class="modal-body">
             <ul class="list-group row">
               <li class="list-group-item">2005 - 2006 VPU Mathematics & IT at Vilnius University</li>
               <li class="list-group-item">2008 - 2010 South West College Enniskillen Campus, Northern Ireland</li>
@@ -313,62 +379,93 @@
               <li class="list-group-item">2009 - CISCO: PC Hardware and Software</li>
               <li class="list-group-item">2010 - CCNA: Networking for Home and Small Businesses</li>
             </ul>
-              </div>
-              
-              <div modal-footer></div>
-          
           </div>
+            
+          <div class="modal-footer">
+            <a href="tel:=+447743499249" class="float-left">
+              <i class="fa fa-mobile"></i><span class="sr-only">Mobile</span>
+              07743499249
+            </a>
+            <a href="mailto:minde@mindelis.com">
+              <i class="fa fa-envelope"></i><span class="sr-only">Email</span>
+              minde@mindelis.com
+            </a>
+          </div>
+        
         </div>
+      </div>
     </div>
   
-    <div class="modal interests fade" tabindex="-1" role="dialog" aria-labelledby="interestsLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
+    <div class="modal fade" id="modal_interests" tabindex="-1" role="dialog" aria-labelledby="interestsLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          
+          <div class="modal-header">
+            <h5 class="modal-title" id="interestsLabel">Interests</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
             
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="interestsLabel">Interests</h4>
-              </div>
-              
-              <div class="modal-body">
+          <div class="modal-body">
             <p>Active person who enjoys swimming, travelling and outdoors. Hobbies include sketching, cooking and attending music festivals.</p>
-              </div>
-              
-              <div modal-footer></div>
-          
           </div>
+            
+          <div class="modal-footer">
+            <a href="tel:=+447743499249" class="float-left">
+              <i class="fa fa-mobile"></i><span class="sr-only">Mobile</span>
+              07743499249
+            </a>
+            <a href="mailto:minde@mindelis.com">
+              <i class="fa fa-envelope"></i><span class="sr-only">Email</span>
+              minde@mindelis.com
+            </a>
+          </div>
+        
         </div>
+      </div>
     </div>
   
-    <div class="modal cv fade" tabindex="-1" role="dialog" aria-labelledby="cvLabel">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="cvLabel">Download CV</h4>
-              </div>
-              
-              <div class="modal-body">
-            <p>Please download my CV and cover letter in MS Word or PDF formats.</p>
-            <div class="row">
-              <div class="col-md-6 get-cv">
-                <p><b>Get My CV:</b></p>
-                <form method="get" action="cv/minde-vieras-cv.pdf"><button class="btn btn-default">PDF</button></form>
-                <form method="get" action="cv/minde-vieras-cv.docx"><button class="btn btn-default">MS Word</button></form>
-              </div>
-              <div class="col-md-6 get-cover">
-                <p><b>Get My Cover Letter:</b></p>
-                <form method="get" action="cv/minde-vieras-cover.pdf"><button class="btn btn-default">PDF</button></form>
-                <form method="get" action="cv/minde-vieras-cover.docx"><button class="btn btn-default">MS Word</button></form>
-              </div>
-            </div>
-              </div>
-              
-              <div modal-footer></div>
+    <div class="modal fade" id="modal_cv" tabindex="-1" role="dialog" aria-labelledby="cvLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
           
+          <div class="modal-header">
+            <h5 class="modal-title" id="cvLabel">Download CV</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+            
+          <div class="modal-body">
+        <p>Please download my CV and cover letter in MS Word or PDF formats.</p>
+        <div class="row">
+          <div class="col-md-6 get-cv">
+            <p><b>Get My CV:</b></p>
+            <form method="get" action="cv/minde-vieras-cv.pdf"><button class="btn btn-default">PDF</button></form>
+            <form method="get" action="cv/minde-vieras-cv.docx"><button class="btn btn-default">MS Word</button></form>
+          </div>
+          <div class="col-md-6 get-cover">
+            <p><b>Get My Cover Letter:</b></p>
+            <form method="get" action="cv/minde-vieras-cover.pdf"><button class="btn btn-default">PDF</button></form>
+            <form method="get" action="cv/minde-vieras-cover.docx"><button class="btn btn-default">MS Word</button></form>
           </div>
         </div>
+          </div>
+            
+          <div class="modal-footer">
+            <a href="tel:=+447743499249" class="float-left">
+              <i class="fa fa-mobile"></i><span class="sr-only">Mobile</span>
+              07743499249
+            </a>
+            <a href="mailto:minde@mindelis.com">
+              <i class="fa fa-envelope"></i><span class="sr-only">Email</span>
+              minde@mindelis.com
+            </a>
+          </div>
+        
+        </div>
+      </div>
     </div>
   
     <footer>
@@ -378,15 +475,15 @@
       </a>
       <a href="tel:{{phone}}" uib-popover="Phone me" popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="footer-link">
         <span class="sr-only">{{phone}}</span>
-        <i class="fa fa-mobile"></i>
+        <i class="fa fa-mobile-alt"></i>
       </a>
       <a href="https://www.github.com/MindeVieras" target="_blank" uib-popover="GitHub" popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="footer-link">
         <span class="sr-only">GitHub</span>
-        <i class="fa fa-github"></i>
+        <i class="fab fa-github"></i>
       </a>
       <a href="https://gb.linkedin.com/in/minde-vieras-3a4637129" target="_blank" uib-popover="LinkedIn" popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="footer-link">
         <span class="sr-only">LinkedIn</span>
-        <i class="fa fa-linkedin"></i>
+        <i class="fab fa-linkedin"></i>
       </a>
       <a uib-popover="Download CV" popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="footer-link">
         <span class="sr-only">CV</span>

@@ -14,19 +14,6 @@ export default class Portfolio {
 
     // Initialize Pizza Class
     this.Pizza = new PizzaClass(this.windowWidth, this.windowHeight, 'pizza_svg')
-
-    // this.sidebarWidth = this.sidebarWrapper.offsetWidth
-    // this.menuList = document.getElementById('main_navigation')
-    // this.menuItems = document.querySelectorAll('.menu-link')
-    // this.sections = document.querySelectorAll('#main_content .main-section')
-    // this.scrollOffset = window.innerHeight / 2
-    
-    // Munu clicks
-    // this.menuItems.forEach(link => {
-    //   link.addEventListener('click', this.menuClick)
-    // })
-
-    // this.menuClick = this.menuClick.bind(this)
   }
 
   init() {

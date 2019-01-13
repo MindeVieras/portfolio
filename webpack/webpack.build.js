@@ -43,6 +43,12 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      Tether: 'tether'
+    }),
     new HtmlWebpackPlugin({
       template: process.cwd()+'/src/index.html',
       filename: process.cwd()+'/dist/index.html',

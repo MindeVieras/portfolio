@@ -1,6 +1,9 @@
 
+import 'bootstrap'
+
 // Import styles
-import 'bootstrap/scss/bootstrap-reboot.scss'
+import '@fortawesome/fontawesome-free/css/all.css'
+import 'bootstrap/scss/bootstrap.scss'
 import '../sass/main.scss'
 
 // Import Portfolio Class
