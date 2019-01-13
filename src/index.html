@@ -1,21 +1,296 @@
+
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp" class="no-js">
+<html lang="en" class="no-js">
 <head>
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-M2JCJR7');</script>
+  <!-- End Google Tag Manager -->
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Portfolio | Minde Vieras</title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
 </head>
 <body>
 
-	<div ng-view></div>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2JCJR7"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-	<script src="js/app.js"></script>
+  <div id="main_wrapper" style="opacity:0;">
+
+    <aside id="main_sidebar">
+
+      <header>
+        <a href="#hero_section" class="logo-wrapper menu-link">
+          <img class="logo" src="/images/logo.png" width="505" height="400" />
+          <span class="name">Minde Vieras</span>
+        </a>
+        <span class="slogan">Full Stack Developer</span>
+      </header>
+      
+      <nav id="main_navigation">
+        <ul>
+          <li><a class="menu-link" href="#about_section">About</a></li>
+          <li><a class="menu-link" href="#projects_section">Projects</a></li>
+          <li><a class="menu-link" href="#experience_section">Experience</a></li>
+          <li><a class="menu-link" href="#expertise_section">Expertise</a></li>
+          <li><a class="menu-link" href="#education_section">Education</a></li>
+          <li><a class="menu-link" href="#interests_section">Interests</a></li>
+          <li><a class="menu-link" href="#skills_section">Skills</a></li>
+        </ul>
+      </nav>
+
+    </aside>
+
+    <main id="main_content">
+      
+      <section id="hero_section" class="main-section">
+        <canvas id="hero_canvas"></canvas>
+        <img style="display:none;" id="hero_image" src="/images/hero1.jpg" />
+        <h1>Code is written for people, and for machines to execute.</h1>
+      </section>
+    
+      <section id="about_section" class="main-section">
+        <h2 class="section-title">About</h2>
+        <div class="section-content">
+          <p>Motivated Web Developer. Highly competent front-end development skills, with an emphasis on JavaScript and its libraries (jQuery, Angular). Confident back-end development skills, especially using PHP and Drupal, from successful completion of challenging projects.</p>
+          <p>Real interest in keeping up-to-date with the latest web standards, languages and methods. Makes extensive use of tools such as Git, Grunt and SASS to boost productivity and achieve the best results possible. A deep understanding of how computers and the internet work, and a high level of technical and networking skills.</p>
+        </div>
+      </section>
+
+      <section id="projects_section" class="main-section">
+        <h2 class="section-title">Projects</h2>
+        <div class="section-content">
+
+            <div class="card">
+                <h3>Segris</h3>
+            </div>
+            
+            <div class="card">
+              <div class="card-header"><h3>Segris</h3></div>
+              <div class="card-content">
+                <a href="http://e.segris.lt" target="_blank">
+                  <img alt="Sergris" src="/images/segris.png" />
+                </a>
+                <p>Redesigned the Opencart online shop. Great considerable efforts made for the major development of website design, layout and responsiveness achieved.</p>
+              </div>
+            </div>
+
+        </div>
+      </section>
+      
+      <section id="experience_section" class="main-section">
+        <h2 class="section-title">Experience</h2>
+        <div class="section-content">
+          <p><b>01/16 – 10/16</b> web developer at digital agency <b>Southmedia Ltd.</b> Bristol.</p><ul><li>Responsible for front and backend development of both Wordpress and Drupal websites.</li><li>Typically working from designs, but often given free rein on improving existing websites.</li><li>Whether working individually or with a small team - constantly striving to operate within timescales and hit targets.</li></ul><p></p><p><b>03/13 – 12/15 freelancing web designer/developer.</b></p><ul><li>Creating websites with Drupal 7 CMS, developing themes and modules.</li><li>Building SPA with AngularJS.</li><li>Maintaining already build systems.</li><li>Constantly working with HTML, CSS and JS.</li><li>Experience with MVC pattern.</li><li>Creating design with Adobe tools.</li></ul><p></p><p><b>06/10 – 12/12 Leader, developer. Electric-Shop-Online, Lithuania.</b></p><ul><li>Responsible for communicating with customers.</li><li>Selling and advertising digital goods.</li><li>Maintaining the main online store.</li><li>Repairing, installing and maintaining consumer grade digital equipment.</li></ul><p></p>
+        </div>
+      </section>
+
+      <section id="expertise_section" class="main-section">
+        <h2 class="section-title">Expertise</h2>
+        <div class="section-content">
+          <ul class="list-group row"><li class="list-group-item col-md-4 col-xs-6">Time planning</li><li class="list-group-item col-md-4 col-xs-6">Code quality</li><li class="list-group-item col-md-4 col-xs-6">Technical skills</li><li class="list-group-item col-md-4 col-xs-6">E-commerce</li><li class="list-group-item col-md-4 col-xs-6">Latest standards</li><li class="list-group-item col-md-4 col-xs-6">Managing change</li><li class="list-group-item col-md-4 col-xs-6">Product vision</li><li class="list-group-item col-md-4 col-xs-6">Automation tools</li><li class="list-group-item col-md-4 col-xs-6">Mobile devices</li></ul>
+        </div>
+      </section>
+
+      <section id="education_section" class="main-section">
+        <h2 class="section-title">Education</h2>
+        <div class="section-content">
+          <ul class="list-group row"><li class="list-group-item">2005 - 2006 VPU Mathematics &amp; IT</li><li class="list-group-item">2008 - 2010 South West College Enniskillen Campus, Northern Ireland</li></ul><span class="certs">Certs:</span><ul class="list-group row"><li class="list-group-item">2009 - CISCO: PC Hardware and Software</li><li class="list-group-item">2010 - CCNA: Networking for Home and Small Businesses</li></ul>
+        </div>
+      </section>
+
+      <section id="interests_section" class="main-section">
+        <h2 class="section-title">Interests</h2>
+        <div class="section-content">
+          <p>Active person who enjoys swimming, travelling and outdoors. Hobbies include sketching, cooking and attending music festivals.</p>
+        </div>
+      </section>
+
+      <section id="skills_section" class="main-section">
+        <h2 class="section-title">Skills</h2>
+        <div class="section-content">
+            <div class="modal-body ng-scope" ng-controller="skillsCtrl"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><!-- ngRepeat: devskill in devskills --><div class="panel panel-info ng-scope" data-ng-repeat="devskill in devskills"><div class="panel-heading"><div class="panel-title ng-binding">Front-End</div></div><div class="panel-body devskills"><!-- ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="HTML is the mother of web development." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 203.14107590781285 299.95065603657315 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">HTML</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="Styling is more than enjoyable." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 215.6434465040231 298.7688340595138 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">CSS</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="I use responsive website design everywhere." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 230.90169943749476 295.10565162951536 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">RWD</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="This CSS prepropressor makes my tasks achieve much faster." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 245.39904997395467 289.1006524188368 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">SASS</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="Wow! Amazing things can happen with SVG." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 245.39904997395467 289.1006524188368 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">SVG</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="Top JS library witch I use a lot." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 270.71067811865476 270.71067811865476 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">JQuery</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="Raw JS is always a competition. Endless possibilities." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 289.1006524188368 245.39904997395467 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">JavaScript</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="React is my latest frontend language." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 300 200 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">React.JS</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="Angular is my favorite frontend framework." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 298.7688340595138 184.35655349597693 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">Angular.JS</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --></div></div><!-- end ngRepeat: devskill in devskills --><div class="panel panel-info ng-scope" data-ng-repeat="devskill in devskills"><div class="panel-heading"><div class="panel-title ng-binding">Back-End</div></div><div class="panel-body devskills"><!-- ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="Custom CMS can be also build, with specific functionality." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 230.90169943749476 295.10565162951536 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">Custom CMS</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="My first and also my favorite language." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 245.39904997395467 289.1006524188368 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">PHP</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="When it comes to CMS, Drupal 7 is my choise." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 245.39904997395467 289.1006524188368 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">Drupal CMS</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="Smaller sites that requires CMS are powered by Wordpress." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 258.7785252292473 280.90169943749476 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">Wordpress</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="SQL is great relational database." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 270.71067811865476 270.71067811865476 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">MySQL</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="This online shop CMS is highly customizable and in use for high trafic sites." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 295.10565162951536 230.90169943749473 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">Magento</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="Simple apps that require backend I chose NodeJS." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 289.1006524188368 154.60095002604533 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">Node.js</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="Crucial framework for building my NodeJS apps." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 280.90169943749476 141.22147477075268 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">Express.js</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="NoSQL database in MEAN applications" popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 280.90169943749476 141.22147477075268 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">MongoDB</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --></div></div><!-- end ngRepeat: devskill in devskills --><div class="panel panel-info ng-scope" data-ng-repeat="devskill in devskills"><div class="panel-heading"><div class="panel-title ng-binding">Tools &amp; other</div></div><div class="panel-body devskills"><!-- ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="CLI since late 90's, its in my blood." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 230.90169943749476 295.10565162951536 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">CLI</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="HTTP calls using RESTful and SOAP clients." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 230.90169943749476 295.10565162951536 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">Webservices</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="I love this tool since first day. I use it all the time" popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 258.7785252292473 280.90169943749476 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">Grunt</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="No doubt the best versioning tool." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 270.71067811865476 270.71067811865476 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">GIT</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="Good understanding and knowledge of Adobe Tools." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 270.71067811865476 270.71067811865476 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">AdobeCS</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --><div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'" class="ng-scope"><div class="col-md-2 col-xs-6 skill"><div uib-popover="Amazon Web Services." popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill"><div class="col-md-12 col-xs-6"><div class="progresscircle-wrapper"><div class="progresscircle"></div><div class="round-progress-wrapper ng-isolate-scope" round-progress="" max="100" current="skill.strenght" color="rgba(80,80,80,1)" bgcolor="rgba(120,120,120,.25)" radius="200" semi="true" rounded="false" stroke="200" clockwise="true" responsive="true" duration="1000" animation="easeOutCubic" offset="0" style="width: 100%; position: relative; padding-bottom: 50%;">
+                <svg class="round-progress" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" style="top: 0px; left: 0px; position: absolute; width: 100%; height: 100%; overflow: hidden;">
+                <circle fill="none" cx="200" cy="200" r="100" style="stroke: rgba(120, 120, 120, 0.25); stroke-width: 200px;"></circle>
+                <path fill="none" transform="translate(0,400) rotate(-90)" d="M 280.90169943749476 258.7785252292473 A 100 100 0 0 0 200 100" style="stroke: rgb(80, 80, 80); stroke-width: 200px; stroke-linecap: butt;"></path>
+                <g ng-transclude=""></g>
+                </svg>
+                </div></div></div><div class="skill-name"><span class="ng-binding">AWS</span></div></div></div></div><!-- end ngRepeat: skill in devskill.skills|orderBy:'-strenght' --></div></div><!-- end ngRepeat: devskill in devskills --><div class="panel panel-info personal"><div class="panel-heading"><div class="panel-title">Personal skills</div></div><div class="panel-body"><ul class="list-group row personal-skills"><!-- ngRepeat: perskill in perskills --><li class="list-group-item col-xs-12 ng-binding ng-scope" data-ng-repeat="perskill in perskills">Excellent written and verbal communication skills</li><!-- end ngRepeat: perskill in perskills --><li class="list-group-item col-xs-12 ng-binding ng-scope" data-ng-repeat="perskill in perskills">Innovative, always full of new ideas</li><!-- end ngRepeat: perskill in perskills --><li class="list-group-item col-xs-12 ng-binding ng-scope" data-ng-repeat="perskill in perskills">Good planning and organisation</li><!-- end ngRepeat: perskill in perskills --><li class="list-group-item col-xs-12 ng-binding ng-scope" data-ng-repeat="perskill in perskills">Extensive technical knowledge and consulting experience</li><!-- end ngRepeat: perskill in perskills --><li class="list-group-item col-xs-12 ng-binding ng-scope" data-ng-repeat="perskill in perskills">Ability to work on multiple projects simultaneously</li><!-- end ngRepeat: perskill in perskills --><li class="list-group-item col-xs-12 ng-binding ng-scope" data-ng-repeat="perskill in perskills">Excellent team working skills</li><!-- end ngRepeat: perskill in perskills --><li class="list-group-item col-xs-12 ng-binding ng-scope" data-ng-repeat="perskill in perskills">Ability to follow complex instructions</li><!-- end ngRepeat: perskill in perskills --><li class="list-group-item col-xs-12 ng-binding ng-scope" data-ng-repeat="perskill in perskills">Can work efficiently with minimum supervision</li><!-- end ngRepeat: perskill in perskills --><li class="list-group-item col-xs-12 ng-binding ng-scope" data-ng-repeat="perskill in perskills">Excellent presentation skills</li><!-- end ngRepeat: perskill in perskills --><li class="list-group-item col-xs-12 ng-binding ng-scope" data-ng-repeat="perskill in perskills">Superior attention to detail</li><!-- end ngRepeat: perskill in perskills --></ul></div></div></div>
+        </div>
+      </section>
+  
+    </main>
+
+  </div>
+
+	<script src="scripts.min.js"></script>
 </body>
 </html>
