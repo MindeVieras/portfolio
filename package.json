@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/MindeVieras/portfolio#readme",
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.2.1",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {

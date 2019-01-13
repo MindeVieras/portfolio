@@ -1,6 +1,6 @@
 
 // Import styles
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/scss/bootstrap-reboot.scss'
 import '../sass/main.scss'
 
 // Import Portfolio Class
