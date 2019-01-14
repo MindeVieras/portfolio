@@ -17,7 +17,13 @@ export default class Portfolio {
   }
 
   init() {
-
+    
+    // Open initial modal if hash route
+    if (window.location.hash) {
+      const hash = window.location.hash
+      $(hash).modal()
+    }
+    
     // Load fonts
     WebFont.load({
       google: {

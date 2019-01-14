@@ -320,6 +320,14 @@ class Pizza {
   onPieceClick(id) {
 
     if (typeof id === 'string' || id instanceof String) {
+      
+      if(history.pushState) {
+        history.pushState(null, null, `#modal_${id}`)
+      }
+      else {
+        location.hash = `#modal_${id}`
+      }
+
       $(`#modal_${id}`).modal()
     }
     return
