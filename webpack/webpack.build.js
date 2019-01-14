@@ -72,11 +72,6 @@ module.exports = {
         from: process.cwd()+'/src/images',
         to: process.cwd()+'/dist/images',
         flatten: false
-      },
-      {
-        from: process.cwd()+'/src/cv',
-        to: process.cwd()+'/dist/cv',
-        flatten: false
       }
     ])
   ]
