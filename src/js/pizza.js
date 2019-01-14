@@ -58,7 +58,7 @@ class Pizza {
           centerCircle = document.createElementNS(this.svgNamespaceURI, 'circle')
 
     // Add group click
-    centerGroup.addEventListener('click', () => this.onPieceClick('skills'))
+    // centerGroup.addEventListener('click', () => this.onPieceClick('skills'))
 
     // Add group class name
     centerGroup.classList.add(this.pieceClassName)

@@ -87,57 +87,12 @@
             </button>
           </div>
             
-          <div class="modal-body" ng-controller="skillsCtrl">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <div class="panel panel-info" data-ng-repeat="devskill in devskills">
-              <div class="panel-heading">
-            <div class="panel-title">{{devskill.catnicename}}</div>
-          </div>
-          <div class="panel-body devskills">
-            <div data-ng-repeat="skill in devskill.skills|orderBy:'-strenght'">
-              <div class="col-md-2 col-xs-6 skill">
-                <div uib-popover="{{skill.description}}" popover-trigger="mouseenter" popover-popup-close-delay="200" popover-popup-delay="500" popover-placement="auto" class="single-skill">
-                  <div class="col-md-12 col-xs-6">
-                    <div class="progresscircle-wrapper">
-                      <div class="progresscircle"></div>
-                      <div
-                        round-progress
-                        max="100"
-                        current="skill.strenght"
-                        color="rgba(80,80,80,1)"
-                        bgcolor="rgba(120,120,120,.25)"
-                        radius="200"
-                        semi="true"
-                        rounded="false"
-                        stroke="200"
-                        clockwise="true"
-                        responsive="true"
-                        duration="1000"
-                        animation="easeOutCubic"
-                        offset="0">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="skill-name">
-                    <span>{{skill.nicename}}</span>
-                  </div>
-                </div>
+          <div class="modal-body">
+            <div class="card">
+              <div class="card-body">
+                This is some text within a card body.
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="panel panel-info personal">
-          <div class="panel-heading">
-            <div class="panel-title">Personal skills</div>
-          </div>
-          <div class="panel-body">
-            <ul class="list-group row personal-skills">
-              <li class="list-group-item col-xs-12" data-ng-repeat="perskill in perskills">{{perskill}}</li>
-            </ul>
-          </div>
-        </div>
-
           </div>
           
           <div class="modal-footer">
@@ -156,7 +111,7 @@
     </div>
   
     <div class="modal fade" id="modal_summary" tabindex="-1" role="dialog" aria-labelledby="summaryLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           
           <div class="modal-header">
@@ -167,8 +122,8 @@
           </div>
             
           <div class="modal-body">
-            <p>Motivated experienced Web Developer seeking a career in a dynamic software development team. Highly competent front-end development skills, with an emphasis on JavaScript and its libraries (ReactJS, jQuery). Confident back-end development skills, especially using PHP and NodeJS.</p>
-            <p>Self-taught, with a real interest in keeping up-to-date with the latest web standards, languages and methods. Makes extensive use of tools such as Git, Webpack, Grunt to boost productivity and achieve the best results possible. A deep understanding of how computers and the internet works. High level of technical and networking skills.</p>
+            <p class="lead">Motivated experienced Web Developer seeking a career in a dynamic software development team. Highly competent front-end development skills, with an emphasis on JavaScript and its libraries (ReactJS, jQuery). Confident back-end development skills, especially using PHP and NodeJS.</p>
+            <p class="lead">Self-taught, with a real interest in keeping up-to-date with the latest web standards, languages and methods. Makes extensive use of tools such as Git, Webpack, Grunt to boost productivity and achieve the best results possible. A deep understanding of how computers and the internet works. High level of technical and networking skills.</p>
           </div>
             
           <div class="modal-footer">
@@ -197,10 +152,10 @@
             </button>
           </div>
 
-          <div class="modal-body">
+          <div class="modal-body content-projects">
             <ul class="list-unstyled">
 
-              <li class="media">
+              <li class="media mb-4">
                 <a href="http://e.jovaitas.lt" target="_blank">
                   <img src="/images/jovaitas.png" class="mr-3" alt="Jovaitas" />
                 </a>
@@ -211,7 +166,7 @@
                 </div>
               </li>
 
-              <li class="media">
+              <li class="media mb-4">
                 <a href="http://thefuturescenter.org" target="_blank">
                   <img src="/images/fftf.png" class="mr-3" alt="Futures Centre" />
                 </a>
@@ -222,7 +177,7 @@
                 </div>
               </li>
 
-              <li class="media">
+              <li class="media mb-4">
                 <a href="http://www.foodanddrinkguides.co.uk" target="_blank">
                   <img src="/images/fand.png" class="mr-3" alt="Food & Drink" />
                 </a>
@@ -230,6 +185,28 @@
                   <h5 class="mt-0">Food & Drink</h5>
                   Main goal and purpose achieved to create fully responsive eye catchy website. Drupal template design used with PS design provided.
                   <a href="http://www.foodanddrinkguides.co.uk" target="_blank">Go to site...</a>
+                </div>
+              </li>
+
+              <li class="media mb-4">
+                <a href="http://www.segris.lt/pramogos" target="_blank">
+                  <img src="/images/pramogos.png" class="mr-3" alt="Entertainment" />
+                </a>
+                <div class="media-body">
+                  <h5 class="mt-0">Entertainment</h5>
+                  Dynamic website built by Drupal 7. Template is coded in order to meet client’s requirements. To boost the best performance criteria used only the minimum of plugins and extra functionality was hard coded.
+                  <a href="http://www.segris.lt/pramogos" target="_blank">Go to site...</a>
+                </div>
+              </li>
+
+              <li class="media">
+                <a href="http://e.segris.lt" target="_blank">
+                  <img src="/images/segris.png" class="mr-3" alt="Segris" />
+                </a>
+                <div class="media-body">
+                  <h5 class="mt-0">Segris</h5>
+                  Redesigned the Opencart online shop. Great considerable efforts made for the major development of website design, layout and responsiveness achieved.
+                  <a href="http://e.segris.lt" target="_blank">Go to site...</a>
                 </div>
               </li>
 
@@ -319,7 +296,7 @@
     </div>
   
     <div class="modal fade" id="modal_expertise" tabindex="-1" role="dialog" aria-labelledby="expertiseLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-dialog" role="document">
         <div class="modal-content">
           
           <div class="modal-header">
@@ -330,17 +307,20 @@
           </div>
             
           <div class="modal-body">
-            <ul class="list-group row">
-              <li class="list-group-item col-md-4 col-xs-6">Time planning</li>
-              <li class="list-group-item col-md-4 col-xs-6">Code quality</li>
-              <li class="list-group-item col-md-4 col-xs-6">Technical skills</li>
-              <li class="list-group-item col-md-4 col-xs-6">E-commerce</li>
-              <li class="list-group-item col-md-4 col-xs-6">Latest standards</li>
-              <li class="list-group-item col-md-4 col-xs-6">Managing change</li>
-              <li class="list-group-item col-md-4 col-xs-6">Product vision</li>
-              <li class="list-group-item col-md-4 col-xs-6">Automation tools</li>
-              <li class="list-group-item col-md-4 col-xs-6">Mobile devices</li>
-            </ul>
+            <div class="row">
+              <div class="col-sm">
+                <p>Code quality</p>
+                <p>Automation tools</p>
+                <p>E-commerce</p>
+                <p>Latest standards</p>
+              </div>
+              <div class="col-sm">
+                <p>Documentation</p>
+                <p>Product vision</p>
+                <p>Managing change</p>
+                <p>Technical skills</p>
+              </div>
+            </div>
           </div>
             
           <div class="modal-footer">
@@ -370,15 +350,8 @@
           </div>
             
           <div class="modal-body">
-            <ul class="list-group row">
-              <li class="list-group-item">2005 - 2006 VPU Mathematics & IT at Vilnius University</li>
-              <li class="list-group-item">2008 - 2010 South West College Enniskillen Campus, Northern Ireland</li>
-            </ul>
-            <span class="certs">Certs:</span>
-            <ul class="list-group row">
-              <li class="list-group-item">2009 - CISCO: PC Hardware and Software</li>
-              <li class="list-group-item">2010 - CCNA: Networking for Home and Small Businesses</li>
-            </ul>
+            <p class="lead"><strong>2009</strong> CCNA/CISCO South West College Enniskillen Campus, Northern Ireland</p>
+            <p class="lead"><strong>2005</strong> VPU Mathematics & IT, Lithuania</p>
           </div>
             
           <div class="modal-footer">
@@ -408,7 +381,7 @@
           </div>
             
           <div class="modal-body">
-            <p>Active person who enjoys swimming, travelling and outdoors. Hobbies include sketching, cooking and attending music festivals.</p>
+            <p class="lead">Active person who enjoys cycling, running and snowboarding. Hobbies include cooking and DIY.</p>
           </div>
             
           <div class="modal-footer">
