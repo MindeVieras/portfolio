@@ -35,6 +35,23 @@
       color: #000;
     }
   }
+
+  @include media-breakpoint-down(sm) {
+    
+    .modal-footer {
+      flex-direction: column;
+      align-items: flex-start;
+
+      > a {
+        margin: 0;
+      }
+
+      .phone i {
+        width: 18px;
+        text-align: center;
+      }
+    }
+  }
 }
 
 footer{

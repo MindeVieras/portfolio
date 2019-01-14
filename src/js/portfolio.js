@@ -38,7 +38,6 @@ export default class Portfolio {
 
   // window resize event handler
   onResize() {
-
     // Set global width and height
     this.windowWidth = window.innerWidth
     this.windowHeight = window.innerHeight

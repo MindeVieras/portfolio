@@ -1,9 +1,14 @@
 
+// Import bootstrap
+@import "~bootstrap/scss/bootstrap";
+
 @import "base/mixins";
 
-@import "components/modal";
+@import "components/text";
+@import "components/pizza";
 @import "components/modal";
 
+@import "content/skills";
 @import "content/projects";
 
 body {
