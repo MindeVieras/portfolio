@@ -7,12 +7,30 @@ class Pizza {
     
     // this.svgWidth = svgWidth
     // this.svgHeight = svgHeight
-    this.logo = '/images/logo.png'
+    // this.logo = '/images/logo.png'
     this.svgNamespaceURI = 'http://www.w3.org/2000/svg'
     this.svgLinkNamespaceURI = 'http://www.w3.org/1999/xlink'
     this.pieceClassName = 'pizza-piece'
     this.pizzaSVG = document.getElementById(svgId)
     this.currentPieces = document.getElementsByClassName(this.pieceClassName)
+
+    this.pizzaSVG.addEventListener('load', this.loadSvg)
+  }
+
+  loadSvg() {
+
+    // svgDoc = this.pizzaSVG.contentDocument
+    console.log(this.contentDocument)
+    // // get the inner DOM of alpha.svg
+    // var svgDoc = a.contentDocument;
+    // // get the inner element by id
+    // var delta = svgDoc.getElementById("delta");
+    // // add behaviour
+    // delta.addEventListener("mousedown",function(){
+    //         alert('hello world!')
+    // }, false);
+
+    return
   }
 
   draw() {
@@ -40,15 +58,51 @@ class Pizza {
     this.triangleH = (Math.sqrt(3) * this.circleR) / 2;
     this.pieceTextSize = this.circleR / 2.5
 
-
     // Set pizza SVG dimentions
     this.pizzaSVG.setAttribute('width', this.svgWidth)
     this.pizzaSVG.setAttribute('height', this.svgHeight)
 
-    this.drawCenterPiece()
-    this.drawCenterTopText()
-    this.drawCenterBottomText()
-    this.drawPieces()
+    this.drawCenter()
+    // this.drawCenterPiece()
+    // this.drawPieces()
+  }
+
+  drawCenter() {
+
+    console.log('drawCenter:', this.pizzaSVG)
+    // Set center
+    // const image = document.getElementById('pizza_center_image'),
+    //       circle = document.getElementById('pizza_center_circle')
+
+    // console.log(circle)
+    // Set image attributes
+    // image.setAttribute('width', this.logoSize)
+    // image.setAttribute('height', this.logoSize)
+    // image.setAttribute('x', this.svgCenterX - (this.logoSize / 2))
+    // image.setAttribute('y', this.svgCenterY - (this.logoSize / 2))
+
+    // Set circle attributes
+    // circle.setAttribute('cx', this.svgCenterX)
+    // circle.setAttribute('cy', this.svgCenterY)
+    // circle.setAttribute('r', this.circleR)
+
+    // // Set top text
+    // const topText = document.getElementById('pizza_center_top_text'),
+    //       topTextPath = document.getElementById('pizza_center_top_text_path'),
+    //       topTextD = `M ${this.svgCenterX - this.circleR + (this.circleR / 6)},${this.svgCenterY}
+    //                   A ${this.circleR - (this.circleR / 6)},${this.circleR - (this.circleR / 6)}
+    //                   0 1 1 ${this.svgCenterX + this.circleR - (this.circleR / 6)},${this.svgCenterY}`
+    // topText.setAttribute('d', topTextD)
+    // topTextPath.style.fontSize = this.circleR / 8
+
+    // // Set bottom text
+    // const bottomText = document.getElementById('pizza_center_bottom_text'),
+    //       bottomTextPath = document.getElementById('pizza_center_bottom_text_path'),
+    //       bottomTextD = `M ${this.svgCenterX - this.circleR + 5},${this.svgCenterY}
+    //             A ${this.circleR - 5},${this.circleR - 5}
+    //             0 1 0 ${this.svgCenterX + this.circleR - 5},${this.svgCenterY}`
+    // bottomText.setAttribute('d', bottomTextD)
+    // bottomTextPath.style.fontSize = this.circleR / 5
   }
 
   drawCenterPiece() {
@@ -86,90 +140,6 @@ class Pizza {
 
     // Append center piece to SVG
     this.pizzaSVG.appendChild(centerGroup)
-  }
-
-  drawCenterTopText() {
-
-    // Create center piece text elements
-    const topTextDefs = document.createElementNS(this.svgNamespaceURI, 'defs'),
-          topTextPath = document.createElementNS(this.svgNamespaceURI, 'path'),
-          topTextText = document.createElementNS(this.svgNamespaceURI, 'text'),
-          topTextTextPath = document.createElementNS(this.svgNamespaceURI, 'textPath')
-
-    // Set path attributes
-    topTextPath.id = 'pizzaTopTextPath'
-    
-    // Set path points
-    const topPathD = 
-     `M ${this.svgCenterX - this.circleR + (this.circleR / 6)},${this.svgCenterY}
-      A ${this.circleR - (this.circleR / 6)},${this.circleR - (this.circleR / 6)} 0 1 1 ${this.svgCenterX + this.circleR - (this.circleR / 6)},${this.svgCenterY}`
-    topTextPath.setAttribute('d', topPathD)
-
-    // Set text attributes
-    topTextText.setAttribute('x', 0)
-    topTextText.setAttribute('y', 0)
-    topTextText.setAttribute('text-anchor', 'middle')
-    
-    // Set text path attributes
-    topTextTextPath.setAttribute('startOffset', '50%')
-    topTextTextPath.setAttributeNS(this.svgLinkNamespaceURI, 'xlink:href', '#pizzaTopTextPath')
-    topTextTextPath.style.fill = 'rgba(204,200,200,.7)'
-    topTextTextPath.style.fontSize = this.circleR / 8
-    topTextTextPath.style.letterSpacing = 5
-
-    // Set top text
-    const topText = document.createTextNode('Full Stack Developer')
-    topTextTextPath.appendChild(topText)
-
-    // Append center text elements
-    topTextDefs.appendChild(topTextPath)
-    topTextText.appendChild(topTextTextPath)
-
-    // Append center text to SVG
-    this.pizzaSVG.appendChild(topTextDefs)
-    this.pizzaSVG.appendChild(topTextText)
-  }
-
-  drawCenterBottomText() {
-
-    // Create center piece text elements
-    const topTextDefs = document.createElementNS(this.svgNamespaceURI, 'defs'),
-          topTextPath = document.createElementNS(this.svgNamespaceURI, 'path'),
-          topTextText = document.createElementNS(this.svgNamespaceURI, 'text'),
-          topTextTextPath = document.createElementNS(this.svgNamespaceURI, 'textPath')
-
-    // Set path attributes
-    topTextPath.id = 'pizzaBottomTextPath'
-    
-    // Set path points
-    const topPathD = 
-     `M ${this.svgCenterX - this.circleR + 5},${this.svgCenterY}
-      A ${this.circleR - 5},${this.circleR - 5} 0 1 0 ${this.svgCenterX + this.circleR - 5},${this.svgCenterY}`
-    topTextPath.setAttribute('d', topPathD)
-
-    // Set text attributes
-    topTextText.setAttribute('x', 0)
-    topTextText.setAttribute('y', 0)
-    topTextText.setAttribute('text-anchor', 'middle')
-    
-    // Set text path attributes
-    topTextTextPath.setAttribute('startOffset', '50%')
-    topTextTextPath.setAttributeNS(this.svgLinkNamespaceURI, 'xlink:href', '#pizzaBottomTextPath')
-    topTextTextPath.style.fill = 'rgba(204,200,200,.7)'
-    topTextTextPath.style.fontSize = this.circleR / 5
-    topTextTextPath.style.letterSpacing = 5
-
-    // Set top text
-    const topText = document.createTextNode('Minde Vieras')
-    topTextTextPath.appendChild(topText)
-
-    // Append center text elements
-    topTextDefs.appendChild(topTextPath)
-    topTextText.appendChild(topTextTextPath)
-
-    // Append center text to SVG
-    this.pizzaSVG.appendChild(topTextDefs)
-    this.pizzaSVG.appendChild(topTextText)
   }
 
   drawPieces() {
