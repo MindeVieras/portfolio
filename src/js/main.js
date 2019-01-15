@@ -12,3 +12,4 @@ const P = new Portfolio()
 // main window events
 window.onload = P.init()
 window.addEventListener('resize', () => P.onResize())
+window.addEventListener('hashchange', () => P.onHashChange())

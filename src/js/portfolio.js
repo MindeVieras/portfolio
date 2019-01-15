@@ -19,11 +19,15 @@ export default class Portfolio {
   init() {
     
     // Open initial modal if hash route
-    if (window.location.hash) {
-      const hash = window.location.hash
-      $(hash).modal()
-    }
+    if (window.location.hash)
+      $(window.location.hash).modal()
     
+    // Also clear hash rout on modal close
+    $('.modal').on('hidden.bs.modal', function (e) {
+      history.pushState('', document.title, window.location.pathname
+      + window.location.search)
+    })
+
     // Load fonts
     WebFont.load({
       google: {
@@ -52,29 +56,13 @@ export default class Portfolio {
     this.Pizza.draw()
   }
 
-  // on menu click scroll to section
-  menuClick(e) {
+  onHashChange() {
+      
+    // Open initial modal if hash route
+    if (window.location.hash)
+      $(window.location.hash).modal()
+    else
+      $('.modal').modal('hide')
 
-    e.preventDefault()
-    
-    const href = this.getAttribute('href')
-    if (href) {
-      // scrollToElement(href, {
-      //   offset: 0,
-      //   duration: 750
-      // })
-    }
-  }
-
-  // set menu active menu item
-  setActive(activeItem) {
-    // activeItem.classList.add('active')
-  }
-
-  // remove active menu class
-  removeCurrentActive() {
-    // this.menuItems.forEach(item => {
-    //   item.classList.remove('active')
-    // })
   }
 }
