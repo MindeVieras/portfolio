@@ -14,7 +14,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Portfolio | Minde Vieras</title>
-  <meta name="description" content="">
+  <meta name="description" content="Full stack web developer from Bristol. Backend - PHP, NodeJS. Frontend - ReactJS, Redux">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <!-- Favicons -->
@@ -48,10 +48,13 @@
   <div id="main_wrapper" style="opacity:0;">
     
     <svg id="pizza_svg" width="0" height="0" xmlns="http://www.w3.org/2000/svg">
-      
-      <g id="skills" class="pizza-piece">
 
-        <!-- Top text -->
+      <g data-piece id="piece_skills">
+
+        <title>Skills</title>
+        <circle id="pizza_center_circle" fill="#333333"></circle>
+          
+        <!-- Center Top text -->
         <defs><path id="pizza_center_top_text"></path></defs>
         <text x="0" y="0" text-anchor="middle">
           <textPath id="pizza_center_top_text_path" startOffset="50%" xlink:href="#pizza_center_top_text" style="fill:rgba(204, 200, 200, 0.7);letter-spacing:5px;">
@@ -59,7 +62,7 @@
           </textPath>
         </text>
 
-        <!-- Bottom text -->
+        <!-- Center Bottom text -->
         <defs><path id="pizza_center_bottom_text"></path></defs>
         <text x="0" y="0" text-anchor="middle">
           <textPath id="pizza_center_bottom_text_path" startOffset="50%" xlink:href="#pizza_center_bottom_text" style="fill:rgba(204, 200, 200, 0.7);letter-spacing:5px;">
@@ -67,16 +70,11 @@
           </textPath>
         </text>
 
-        <!-- <g>
-          <title>Skills</title>
-          <image id="pizza_center_image" xlink:href="/images/logo.png"></image>
-          <circle id="pizza_center_circle" fill="#333333"></circle>
-        </g> -->
       </g>
       
     </svg>
 
-    <div class="modal fade" id="modal_skills" tabindex="-1" role="dialog" aria-labelledby="skillsLabel" aria-hidden="true">
+    <div class="modal fade" id="skills" tabindex="-1" role="dialog" aria-labelledby="skillsLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           
@@ -163,7 +161,7 @@
       </div>
     </div>
   
-    <div class="modal fade" id="modal_summary" tabindex="-1" role="dialog" aria-labelledby="summaryLabel" aria-hidden="true">
+    <div class="modal fade" id="summary" tabindex="-1" role="dialog" aria-labelledby="summaryLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           
@@ -192,7 +190,7 @@
       </div>
     </div>
   
-    <div class="modal fade" id="modal_projects" tabindex="-1" role="dialog" aria-labelledby="projectsLabel" aria-hidden="true">
+    <div class="modal fade" id="projects" tabindex="-1" role="dialog" aria-labelledby="projectsLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           
@@ -277,7 +275,7 @@
       </div>
     </div>
   
-    <div class="modal fade" id="modal_experience" tabindex="-1" role="dialog" aria-labelledby="experienceLabel" aria-hidden="true">
+    <div class="modal fade" id="experience" tabindex="-1" role="dialog" aria-labelledby="experienceLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           
@@ -325,7 +323,7 @@
       </div>
     </div>
   
-    <div class="modal fade" id="modal_expertise" tabindex="-1" role="dialog" aria-labelledby="expertiseLabel" aria-hidden="true">
+    <div class="modal fade" id="expertise" tabindex="-1" role="dialog" aria-labelledby="expertiseLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           
@@ -366,7 +364,7 @@
       </div>
     </div>
   
-    <div class="modal fade" id="modal_education" tabindex="-1" role="dialog" aria-labelledby="educationLabel" aria-hidden="true">
+    <div class="modal fade" id="education" tabindex="-1" role="dialog" aria-labelledby="educationLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           
@@ -395,7 +393,7 @@
       </div>
     </div>
   
-    <div class="modal fade" id="modal_interests" tabindex="-1" role="dialog" aria-labelledby="interestsLabel" aria-hidden="true">
+    <div class="modal fade" id="interests" tabindex="-1" role="dialog" aria-labelledby="interestsLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           

@@ -1,7 +1,7 @@
 
 #pizza_svg {
 
-  .pizza-piece {
+  .pizza-piece, [data-piece] {
     cursor: pointer;
 
     path, circle{

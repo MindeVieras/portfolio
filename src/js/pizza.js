@@ -7,30 +7,12 @@ class Pizza {
     
     // this.svgWidth = svgWidth
     // this.svgHeight = svgHeight
-    // this.logo = '/images/logo.png'
+    this.logo = '/images/logo.png'
     this.svgNamespaceURI = 'http://www.w3.org/2000/svg'
     this.svgLinkNamespaceURI = 'http://www.w3.org/1999/xlink'
     this.pieceClassName = 'pizza-piece'
     this.pizzaSVG = document.getElementById(svgId)
     this.currentPieces = document.getElementsByClassName(this.pieceClassName)
-
-    this.pizzaSVG.addEventListener('load', this.loadSvg)
-  }
-
-  loadSvg() {
-
-    // svgDoc = this.pizzaSVG.contentDocument
-    console.log(this.contentDocument)
-    // // get the inner DOM of alpha.svg
-    // var svgDoc = a.contentDocument;
-    // // get the inner element by id
-    // var delta = svgDoc.getElementById("delta");
-    // // add behaviour
-    // delta.addEventListener("mousedown",function(){
-    //         alert('hello world!')
-    // }, false);
-
-    return
   }
 
   draw() {
@@ -58,88 +40,65 @@ class Pizza {
     this.triangleH = (Math.sqrt(3) * this.circleR) / 2;
     this.pieceTextSize = this.circleR / 2.5
 
+
     // Set pizza SVG dimentions
     this.pizzaSVG.setAttribute('width', this.svgWidth)
     this.pizzaSVG.setAttribute('height', this.svgHeight)
 
     this.drawCenter()
-    // this.drawCenterPiece()
-    // this.drawPieces()
+    this.drawPieces()
   }
+
 
   drawCenter() {
 
-    console.log('drawCenter:', this.pizzaSVG)
-    // Set center
-    // const image = document.getElementById('pizza_center_image'),
-    //       circle = document.getElementById('pizza_center_circle')
-
-    // console.log(circle)
-    // Set image attributes
-    // image.setAttribute('width', this.logoSize)
-    // image.setAttribute('height', this.logoSize)
-    // image.setAttribute('x', this.svgCenterX - (this.logoSize / 2))
-    // image.setAttribute('y', this.svgCenterY - (this.logoSize / 2))
+    // Set center vars
+    const center = document.getElementById('piece_skills'),
+          circle = document.getElementById('pizza_center_circle'),
+          logo = document.createElementNS(this.svgNamespaceURI, 'image')
 
     // Set circle attributes
-    // circle.setAttribute('cx', this.svgCenterX)
-    // circle.setAttribute('cy', this.svgCenterY)
-    // circle.setAttribute('r', this.circleR)
+    circle.setAttribute('cx', this.svgCenterX)
+    circle.setAttribute('cy', this.svgCenterY)
+    circle.setAttribute('r', this.circleR)
 
-    // // Set top text
-    // const topText = document.getElementById('pizza_center_top_text'),
-    //       topTextPath = document.getElementById('pizza_center_top_text_path'),
-    //       topTextD = `M ${this.svgCenterX - this.circleR + (this.circleR / 6)},${this.svgCenterY}
-    //                   A ${this.circleR - (this.circleR / 6)},${this.circleR - (this.circleR / 6)}
-    //                   0 1 1 ${this.svgCenterX + this.circleR - (this.circleR / 6)},${this.svgCenterY}`
-    // topText.setAttribute('d', topTextD)
-    // topTextPath.style.fontSize = this.circleR / 8
+    // Set top text
+    const topText = document.getElementById('pizza_center_top_text'),
+          topTextPath = document.getElementById('pizza_center_top_text_path'),
+          topTextD = `M ${this.svgCenterX - this.circleR + (this.circleR / 6)},${this.svgCenterY}
+                      A ${this.circleR - (this.circleR / 6)},${this.circleR - (this.circleR / 6)}
+                      0 1 1 ${this.svgCenterX + this.circleR - (this.circleR / 6)},${this.svgCenterY}`
+    topText.setAttribute('d', topTextD)
+    topTextPath.style.fontSize = this.circleR / 8
 
-    // // Set bottom text
-    // const bottomText = document.getElementById('pizza_center_bottom_text'),
-    //       bottomTextPath = document.getElementById('pizza_center_bottom_text_path'),
-    //       bottomTextD = `M ${this.svgCenterX - this.circleR + 5},${this.svgCenterY}
-    //             A ${this.circleR - 5},${this.circleR - 5}
-    //             0 1 0 ${this.svgCenterX + this.circleR - 5},${this.svgCenterY}`
-    // bottomText.setAttribute('d', bottomTextD)
-    // bottomTextPath.style.fontSize = this.circleR / 5
-  }
+    // Set bottom text
+    const bottomText = document.getElementById('pizza_center_bottom_text'),
+          bottomTextPath = document.getElementById('pizza_center_bottom_text_path'),
+          bottomTextD = `M ${this.svgCenterX - this.circleR + 5},${this.svgCenterY}
+                A ${this.circleR - 5},${this.circleR - 5}
+                0 1 0 ${this.svgCenterX + this.circleR - 5},${this.svgCenterY}`
+    bottomText.setAttribute('d', bottomTextD)
+    bottomTextPath.style.fontSize = this.circleR / 5
 
-  drawCenterPiece() {
+    // ToDO - make image load from HTML...
+    // Remove logo thats already drown
+    const currentLogo = document.getElementById('pizza_logo')
+    if (currentLogo) {
+      currentLogo.parentNode.removeChild(currentLogo)
+    }
 
-    // Create center piece elements
-    const centerGroup  = document.createElementNS(this.svgNamespaceURI, 'g'),
-          centerTitle  = document.createElementNS(this.svgNamespaceURI, 'title'),
-          centerImage  = document.createElementNS(this.svgNamespaceURI, 'image'),
-          centerCircle = document.createElementNS(this.svgNamespaceURI, 'circle')
+    // Set attributes
+    logo.id = 'pizza_logo'
+    logo.setAttribute('width', this.logoSize)
+    logo.setAttribute('height', this.logoSize)
+    logo.setAttribute('x', this.svgCenterX - (this.logoSize / 2))
+    logo.setAttribute('y', this.svgCenterY - (this.logoSize / 2))
+    logo.setAttributeNS(this.svgLinkNamespaceURI, 'xlink:href', this.logo)
 
-    // Add group click
-    centerGroup.addEventListener('click', () => this.onPieceClick('skills'))
-
-    // Add group class name
-    centerGroup.classList.add(this.pieceClassName)
-
-    // Set image attributes
-    centerImage.setAttribute('width', this.logoSize)
-    centerImage.setAttribute('height', this.logoSize)
-    centerImage.setAttribute('x', this.svgCenterX - (this.logoSize / 2))
-    centerImage.setAttribute('y', this.svgCenterY - (this.logoSize / 2))
-    centerImage.setAttributeNS(this.svgLinkNamespaceURI, 'xlink:href', this.logo)
-
-    // Set circle attributes
-    centerCircle.setAttribute('fill', '#333333')
-    centerCircle.setAttribute('cx', this.svgCenterX)
-    centerCircle.setAttribute('cy', this.svgCenterY)
-    centerCircle.setAttribute('r', this.circleR)
-
-    // Append center piece elements
-    centerTitle.textContent = 'Skills'
-    centerGroup.appendChild(centerTitle)
-    centerGroup.appendChild(centerImage)
-    centerGroup.appendChild(centerCircle)
-
-    // Append center piece to SVG
-    this.pizzaSVG.appendChild(centerGroup)
+    // Add on center click
+    center.addEventListener('click', () => this.onPieceClick('skills'))
+    // Append logo to center
+    center.appendChild(logo)
   }
 
   drawPieces() {
@@ -292,13 +251,13 @@ class Pizza {
     if (typeof id === 'string' || id instanceof String) {
       
       if(history.pushState) {
-        history.pushState(null, null, `#modal_${id}`)
+        history.pushState(null, null, `#${id}`)
       }
       else {
-        location.hash = `#modal_${id}`
+        location.hash = `#${id}`
       }
 
-      $(`#modal_${id}`).modal()
+      $(`#${id}`).modal()
     }
     return
   }
