@@ -1,4 +1,8 @@
 
+dialog {
+  display: block!important
+}
+
 .modal {
 
   .modal-content {
@@ -6,7 +10,7 @@
     font-family: $font-main;
     letter-spacing: 1px;
     color: #000;
-    border-radius:30px;
+    border-radius: 30px;
     padding: 10px;
 
     .modal-header {

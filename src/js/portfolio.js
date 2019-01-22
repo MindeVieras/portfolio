@@ -1,19 +1,48 @@
 
 import WebFont from 'webfontloader'
 
+import data from '../data.json'
 import PizzaClass from './pizza'
+
+import modalTemplate from './templates/modal.hbs'
+import footerTemplate from './templates/footer.hbs'
 
 export default class Portfolio {
 
   constructor() {
 
     // Set initial variables
+    this.data = data
     this.windowWidth = window.innerWidth
     this.windowHeight = window.innerHeight
     this.mainWrapper = document.getElementById('main_wrapper')
 
     // Initialize Pizza Class
     this.Pizza = new PizzaClass(this.windowWidth, this.windowHeight, 'pizza_svg')
+  }
+
+  loadTemplates() {
+
+    const { sections } = this.data
+    
+    // Load modals
+    sections.map(section => {
+
+      let { id, title, content } = section
+      const modal = document.createElement('dialog')
+      let data = { id, title, content }
+      
+      modal.innerHTML = modalTemplate(data)
+      this.mainWrapper.appendChild(modal)
+
+      return
+    })
+
+    // Load footer
+    const footer = document.createElement('footer')
+    footer.innerHTML = footerTemplate()
+    this.mainWrapper.appendChild(footer)
+    
   }
 
   init() {
