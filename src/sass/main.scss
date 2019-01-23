@@ -7,6 +7,7 @@
 @import "components/text";
 @import "components/pizza";
 @import "components/modal";
+@import "components/footer";
 
 @import "content/skills";
 @import "content/projects";
@@ -17,4 +18,14 @@ body {
   // background-size: cover;
   background-color: black;
   overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
 }

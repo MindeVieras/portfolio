@@ -45,24 +45,23 @@ class Pizza {
     this.pizzaSVG.setAttribute('width', this.svgWidth)
     this.pizzaSVG.setAttribute('height', this.svgHeight)
 
-    this.drawCenter()
+    this.setCenterDimensions()
     this.drawPieces()
   }
 
+  setCenterDimensions() {
 
-  drawCenter() {
-
-    // Set center vars
+    // center elements
     const center = document.getElementById('piece_skills'),
           circle = document.getElementById('pizza_center_circle'),
-          logo = document.createElementNS(this.svgNamespaceURI, 'image')
+          logo = document.getElementById('pizza_logo')
 
-    // Set circle attributes
+    // Circle attributes
     circle.setAttribute('cx', this.svgCenterX)
     circle.setAttribute('cy', this.svgCenterY)
     circle.setAttribute('r', this.circleR)
 
-    // Set top text
+    // Top text vars
     const topText = document.getElementById('pizza_center_top_text'),
           topTextPath = document.getElementById('pizza_center_top_text_path'),
           topTextD = `M ${this.svgCenterX - this.circleR + (this.circleR / 6)},${this.svgCenterY}
@@ -71,7 +70,7 @@ class Pizza {
     topText.setAttribute('d', topTextD)
     topTextPath.style.fontSize = this.circleR / 8
 
-    // Set bottom text
+    // Bottom text vars
     const bottomText = document.getElementById('pizza_center_bottom_text'),
           bottomTextPath = document.getElementById('pizza_center_bottom_text_path'),
           bottomTextD = `M ${this.svgCenterX - this.circleR + 5},${this.svgCenterY}
@@ -80,20 +79,11 @@ class Pizza {
     bottomText.setAttribute('d', bottomTextD)
     bottomTextPath.style.fontSize = this.circleR / 5
 
-    // ToDO - make image load from HTML...
-    // Remove logo thats already drown
-    const currentLogo = document.getElementById('pizza_logo')
-    if (currentLogo) {
-      currentLogo.parentNode.removeChild(currentLogo)
-    }
-
-    // Set attributes
-    logo.id = 'pizza_logo'
+    // Set logo attributes
     logo.setAttribute('width', this.logoSize)
     logo.setAttribute('height', this.logoSize)
     logo.setAttribute('x', this.svgCenterX - (this.logoSize / 2))
     logo.setAttribute('y', this.svgCenterY - (this.logoSize / 2))
-    logo.setAttributeNS(this.svgLinkNamespaceURI, 'xlink:href', this.logo)
 
     // Add on center click
     center.addEventListener('click', () => this.onPieceClick('skills'))

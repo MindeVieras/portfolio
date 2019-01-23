@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/MindeVieras/portfolio#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.6.3",
     "bootstrap": "^4.2.1",
     "handlebars": "^4.0.12",
     "handlebars-loader": "^1.7.1",

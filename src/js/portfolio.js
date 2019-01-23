@@ -4,6 +4,7 @@ import WebFont from 'webfontloader'
 import data from '../data.json'
 import PizzaClass from './pizza'
 
+import centerTemplate from './templates/center.hbs'
 import modalTemplate from './templates/modal.hbs'
 import footerTemplate from './templates/footer.hbs'
 
@@ -12,10 +13,12 @@ export default class Portfolio {
   constructor() {
 
     // Set initial variables
+    this.svgNamespaceURI = 'http://www.w3.org/2000/svg'
     this.data = data
     this.windowWidth = window.innerWidth
     this.windowHeight = window.innerHeight
     this.mainWrapper = document.getElementById('main_wrapper')
+    this.pizzaSVG = document.getElementById('pizza_svg')
 
     // Initialize Pizza Class
     this.Pizza = new PizzaClass(this.windowWidth, this.windowHeight, 'pizza_svg')
@@ -23,8 +26,14 @@ export default class Portfolio {
 
   loadTemplates() {
 
-    const { sections } = this.data
+    const { details, sections } = this.data
     
+    // Load pizza center
+    const centerSection = sections[0] // first section for data
+    const center = document.createElementNS(this.svgNamespaceURI, 'g')
+    center.innerHTML = centerTemplate({...details, ...centerSection})
+    this.pizzaSVG.appendChild(center)
+
     // Load modals
     sections.map(section => {
 

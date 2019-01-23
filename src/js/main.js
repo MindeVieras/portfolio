@@ -2,7 +2,6 @@
 import 'bootstrap'
 
 // Import styles
-import '@fortawesome/fontawesome-free/css/all.css'
 import '../sass/main.scss'
 
 // Import Portfolio Class

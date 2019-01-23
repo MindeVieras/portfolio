@@ -1,14 +1,18 @@
 {
+  "details": {
+    "myName": "Minde Vieras",
+    "myTitle": "Full Stack Developer"
+  },
   "sections": [
-    {
-      "id": "summary",
-      "title": "Summary",
-      "content": "<p>Motivated experienced Web Developer seeking a career in a dynamic software development team. Highly competent front-end development skills, with an emphasis on JavaScript and its libraries (ReactJS, jQuery). Confident back-end development skills, especially using PHP and NodeJS.</p><p>Self-taught, with a real interest in keeping up-to-date with the latest web standards, languages and methods. Makes extensive use of tools such as Git, Webpack, Grunt to boost productivity and achieve the best results possible. A deep understanding of how computers and the internet works. High level of technical and networking skills.</p>"
-    },
     {
       "id": "skills",
       "title": "Skills",
       "content": "<div class=\"mb-4\"><h4>Font-end<\/h4><div class=\"skills-list\"><span class=\"badge badge-secondary\">HTML<\/span> <span class=\"badge badge-secondary\">CSS\/SASS<\/span> <span class=\"badge badge-secondary\">Bootstrap<\/span> <span class=\"badge badge-secondary\">MaterialUI<\/span> <span class=\"badge badge-secondary\">SematicUI<\/span><br><span class=\"badge badge-secondary\">JavaScript<\/span> <span class=\"badge badge-secondary\">ES6<\/span> <span class=\"badge badge-secondary\">ReactJS<\/span> <span class=\"badge badge-secondary\">Redux<\/span> <span class=\"badge badge-secondary\">jQuery<\/span> <span class=\"badge badge-secondary\">AngularJS<\/span><\/div><\/div><div class=\"mb-4\"><h4>Back-end<\/h4><div class=\"skills-list\"><span class=\"badge badge-secondary\">PHP<\/span> <span class=\"badge badge-secondary\">MySQL<\/span> <span class=\"badge badge-secondary\">NodeJS<\/span> <span class=\"badge badge-secondary\">ExpressJS<\/span> <span class=\"badge badge-secondary\">Mongo<\/span><\/div><\/div><div class=\"mb-4\"><h4>CMS<\/h4><div class=\"skills-list\"><span class=\"badge badge-secondary\">Drupal 7<\/span> <span class=\"badge badge-secondary\">Drupal 8<\/span> <span class=\"badge badge-secondary\">WordPress<\/span> <span class=\"badge badge-secondary\">Magento 1<\/span> <span class=\"badge badge-secondary\">Magento 2<\/span><\/div><\/div><div class=\"mb-4\"><h4>Tools &amp; Other<\/h4><div class=\"skills-list\"><span class=\"badge badge-secondary\">Git<\/span> <span class=\"badge badge-secondary\">Webpack<\/span> <span class=\"badge badge-secondary\">Grunt<\/span> <span class=\"badge badge-secondary\">NPM<\/span> <span class=\"badge badge-secondary\">CI\/CD<\/span> <span class=\"badge badge-secondary\">LAMP<\/span><\/div><\/div><div><h4>Cloud Computing<\/h4><div class=\"skills-list\"><span class=\"badge badge-secondary\">AWS<\/span> <span class=\"badge badge-secondary\">Heroku<\/span> <span class=\"badge badge-secondary\">DigitalOcean<\/span> <span class=\"badge badge-secondary\">Rackspace<\/span> <span class=\"badge badge-secondary\">DNS<\/span><\/div><\/div>"
+    },
+    {
+      "id": "summary",
+      "title": "Summary",
+      "content": "<p>Motivated experienced Web Developer seeking a career in a dynamic software development team. Highly competent front-end development skills, with an emphasis on JavaScript and its libraries (ReactJS, jQuery). Confident back-end development skills, especially using PHP and NodeJS.</p><p>Self-taught, with a real interest in keeping up-to-date with the latest web standards, languages and methods. Makes extensive use of tools such as Git, Webpack, Grunt to boost productivity and achieve the best results possible. A deep understanding of how computers and the internet works. High level of technical and networking skills.</p>"
     },
     {
       "id": "projects",

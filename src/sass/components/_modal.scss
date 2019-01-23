@@ -27,17 +27,20 @@ dialog {
     background-color: rgba(204,204,204,.5);
     border-radius: 0 0 20px 20px;
     justify-content: space-between;
+    font-size: 18px;
     
-    i {
-      margin-right: 10px;
-      font-size: 18px;
-      vertical-align: middle;
+    .contact {
+      display: flex;
+
+      .icon {
+        margin-right: $space;
+      }
+
+      svg {
+        height: $space * 3;
+      }
     }
 
-    a {
-      text-decoration: none;
-      color: #000;
-    }
   }
 
   @include media-breakpoint-down(sm) {
@@ -55,23 +58,5 @@ dialog {
         text-align: center;
       }
     }
-  }
-}
-
-footer{
-  position: absolute;
-  bottom:10px;
-  left:0;
-  width:100%;
-  text-align: center;
-  a{&:hover i{bottom:5px}}
-  i{
-      position: relative;
-      bottom: 0;
-      color: rgba(204,204,204,.5);
-      font-size: 48px!important;
-      margin: 0 10px;
-      cursor: pointer;
-      @include transition(all .3s ease);
   }
 }
