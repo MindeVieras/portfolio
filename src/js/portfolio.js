@@ -28,18 +28,20 @@ export default class Portfolio {
 
     const { details, sections } = this.data
     
-    // Load pizza center
+    // Load pizza center template
     const centerSection = sections[0] // first section for data
     const center = document.createElementNS(this.svgNamespaceURI, 'g')
     center.innerHTML = centerTemplate({...details, ...centerSection})
     this.pizzaSVG.appendChild(center)
 
-    // Load modals
+    // Load modals templates
     sections.map(section => {
 
-      let { id, title, content } = section
+      let { id, title, modalSize, content } = section
       const modal = document.createElement('dialog')
-      let data = { id, title, content }
+
+      const template = require('./templates/modalContent/'+id+'.hbs')
+      let data = { id, title, modalSize, content: template }
       
       modal.innerHTML = modalTemplate(data)
       this.mainWrapper.appendChild(modal)
@@ -47,7 +49,7 @@ export default class Portfolio {
       return
     })
 
-    // Load footer
+    // Load footer template
     const footer = document.createElement('footer')
     footer.innerHTML = footerTemplate()
     this.mainWrapper.appendChild(footer)
@@ -60,7 +62,7 @@ export default class Portfolio {
     if (window.location.hash)
       $(window.location.hash).modal()
     
-    // Also clear hash rout on modal close
+    // Also clear hash route on modal close
     $('.modal').on('hidden.bs.modal', function (e) {
       history.pushState('', document.title, window.location.pathname
       + window.location.search)

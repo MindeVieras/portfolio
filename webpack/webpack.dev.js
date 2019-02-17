@@ -16,7 +16,10 @@ module.exports = {
     filename: 'scripts.min.js'
   },
   resolve: {
-    extensions: ['.js']
+    extensions: ['.js'],
+    alias: {
+      handlebars: 'handlebars/dist/handlebars.min.js'
+   }
   },
   module: {
     rules: [

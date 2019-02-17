@@ -7,37 +7,37 @@
     {
       "id": "skills",
       "title": "Skills",
-      "content": "<div class=\"mb-4\"><h4>Font-end<\/h4><div class=\"skills-list\"><span class=\"badge badge-secondary\">HTML<\/span> <span class=\"badge badge-secondary\">CSS\/SASS<\/span> <span class=\"badge badge-secondary\">Bootstrap<\/span> <span class=\"badge badge-secondary\">MaterialUI<\/span> <span class=\"badge badge-secondary\">SematicUI<\/span><br><span class=\"badge badge-secondary\">JavaScript<\/span> <span class=\"badge badge-secondary\">ES6<\/span> <span class=\"badge badge-secondary\">ReactJS<\/span> <span class=\"badge badge-secondary\">Redux<\/span> <span class=\"badge badge-secondary\">jQuery<\/span> <span class=\"badge badge-secondary\">AngularJS<\/span><\/div><\/div><div class=\"mb-4\"><h4>Back-end<\/h4><div class=\"skills-list\"><span class=\"badge badge-secondary\">PHP<\/span> <span class=\"badge badge-secondary\">MySQL<\/span> <span class=\"badge badge-secondary\">NodeJS<\/span> <span class=\"badge badge-secondary\">ExpressJS<\/span> <span class=\"badge badge-secondary\">Mongo<\/span><\/div><\/div><div class=\"mb-4\"><h4>CMS<\/h4><div class=\"skills-list\"><span class=\"badge badge-secondary\">Drupal 7<\/span> <span class=\"badge badge-secondary\">Drupal 8<\/span> <span class=\"badge badge-secondary\">WordPress<\/span> <span class=\"badge badge-secondary\">Magento 1<\/span> <span class=\"badge badge-secondary\">Magento 2<\/span><\/div><\/div><div class=\"mb-4\"><h4>Tools &amp; Other<\/h4><div class=\"skills-list\"><span class=\"badge badge-secondary\">Git<\/span> <span class=\"badge badge-secondary\">Webpack<\/span> <span class=\"badge badge-secondary\">Grunt<\/span> <span class=\"badge badge-secondary\">NPM<\/span> <span class=\"badge badge-secondary\">CI\/CD<\/span> <span class=\"badge badge-secondary\">LAMP<\/span><\/div><\/div><div><h4>Cloud Computing<\/h4><div class=\"skills-list\"><span class=\"badge badge-secondary\">AWS<\/span> <span class=\"badge badge-secondary\">Heroku<\/span> <span class=\"badge badge-secondary\">DigitalOcean<\/span> <span class=\"badge badge-secondary\">Rackspace<\/span> <span class=\"badge badge-secondary\">DNS<\/span><\/div><\/div>"
+      "modalSize": "lg"
     },
     {
       "id": "summary",
       "title": "Summary",
-      "content": "<p>Motivated experienced Web Developer seeking a career in a dynamic software development team. Highly competent front-end development skills, with an emphasis on JavaScript and its libraries (ReactJS, jQuery). Confident back-end development skills, especially using PHP and NodeJS.</p><p>Self-taught, with a real interest in keeping up-to-date with the latest web standards, languages and methods. Makes extensive use of tools such as Git, Webpack, Grunt to boost productivity and achieve the best results possible. A deep understanding of how computers and the internet works. High level of technical and networking skills.</p>"
+      "modalSize": "lg"
     },
     {
       "id": "projects",
       "title": "Projects",
-      "content": "<ul class=\"list-unstyled\"><li class=\"media mb-4\"><a href=\"http:\/\/e.jovaitas.lt\" target=\"_blank\"><img src=\"\/images\/jovaitas.png\" class=\"mr-3\" alt=\"Jovaitas\"><\/a><div class=\"media-body\"><h5 class=\"mt-0\">Jovaitas<\/h5>The latest freelance project built by Drupal Commerce. Design and functionality was created in order to meet all client requirements. <a href=\"http:\/\/e.jovaitas.lt\" target=\"_blank\">Go to site...<\/a><\/div><\/li><li class=\"media mb-4\"><a href=\"http:\/\/thefuturescenter.org\" target=\"_blank\"><img src=\"\/images\/fftf.png\" class=\"mr-3\" alt=\"Futures Centre\"><\/a><div class=\"media-body\"><h5 class=\"mt-0\">Futures Centre<\/h5>Costumers share their opinions and make comments based on their experiences. Website created by Drupal using responsive PS designs. Massive load of frontend and backend functionality is prepared. Overall amazing look and feel UI\/UX achieved. <a href=\"http:\/\/thefuturescenter.org\" target=\"_blank\">Go to site...<\/a><\/div><\/li><li class=\"media mb-4\"><a href=\"http:\/\/www.foodanddrinkguides.co.uk\" target=\"_blank\"><img src=\"\/images\/fand.png\" class=\"mr-3\" alt=\"Food &amp; Drink\"><\/a><div class=\"media-body\"><h5 class=\"mt-0\">Food &amp; Drink<\/h5>Main goal and purpose achieved to create fully responsive eye catchy website. Drupal template design used with PS design provided. <a href=\"http:\/\/www.foodanddrinkguides.co.uk\" target=\"_blank\">Go to site...<\/a><\/div><\/li><li class=\"media mb-4\"><a href=\"http:\/\/www.segris.lt\/pramogos\" target=\"_blank\"><img src=\"\/images\/pramogos.png\" class=\"mr-3\" alt=\"Entertainment\"><\/a><div class=\"media-body\"><h5 class=\"mt-0\">Entertainment<\/h5>Dynamic website built by Drupal 7. Template is coded in order to meet client\u2019s requirements. To boost the best performance criteria used only the minimum of plugins and extra functionality was hard coded. <a href=\"http:\/\/www.segris.lt\/pramogos\" target=\"_blank\">Go to site...<\/a><\/div><\/li><li class=\"media\"><a href=\"http:\/\/e.segris.lt\" target=\"_blank\"><img src=\"\/images\/segris.png\" class=\"mr-3\" alt=\"Segris\"><\/a><div class=\"media-body\"><h5 class=\"mt-0\">Segris<\/h5>Redesigned the Opencart online shop. Great considerable efforts made for the major development of website design, layout and responsiveness achieved. <a href=\"http:\/\/e.segris.lt\" target=\"_blank\">Go to site...<\/a><\/div><\/li><\/ul>"
+      "modalSize": "lg"
     },
     {
       "id": "experience",
       "title": "Experience",
-      "content": "<div class=\"mb-4\"><p class=\"lead\"><strong>10\/16 - 02\/19<\/strong> Software Developer at <strong>Creation Media<\/strong>, Bristol<\/p><p>Building and maintaining Drupal, WordPress, Magento and custom platforms. Taking care of full-stack responsibilities as well as managing AWS and common LAMP stack. Writing extensive API's. Working collaboratively with a team.<\/p><\/div><div class=\"mb-4\"><p class=\"lead\"><strong>01\/16 - 10\/16<\/strong> Web Developer at <strong>Southmedia Ltd.<\/strong>, Bristol<\/p><p>Responsible for front-end and back-end development of Drupal or WordPress CMS. Typically working from designs, but often given free rein on improving existing websites. Whether working individually or with a small team and constantly striving to operate within timescales and hit targets.<\/p><\/div><div class=\"mb-4\"><p class=\"lead\"><strong>03\/13 \u2013 12\/15 freelancing web designer\/developer<\/strong><\/p><p>Creating websites with Drupal, developing themes and modules. Building SPA's with Angular1. Maintaining already build systems. Constantly working with HTML, CSS and JS. Experience with MVC pattern. Creating designs with Adobe suite.<\/p><\/div><div class=\"mb-4\"><p class=\"lead\"><strong>06\/10 - 12\/12<\/strong> Leader, developer. <strong>Electric-Shop-Online<\/strong>, Lithuania<\/p><p>Maintaining the main online shop. Repairing, installing and maintaining consumer grade digital equipment.<\/p><\/div>"
+      "modalSize": "lg"
     },
     {
       "id": "expertise",
       "title": "Expertise",
-      "content": "<div class=\"row\"><div class=\"col-sm\"><p>Code quality<\/p><p>Automation tools<\/p><p>E-commerce<\/p><p>Latest standards<\/p><\/div><div class=\"col-sm\"><p>Documentation<\/p><p>Product vision<\/p><p>Managing change<\/p><p>Technical skills<\/p><\/div><\/div>"
+      "modalSize": "md"
     },
     {
       "id": "education",
       "title": "Education",
-      "content": "<p class=\"lead\"><strong>2009<\/strong> CCNA\/CISCO South West College Enniskillen Campus, Northern Ireland<\/p><p class=\"lead\"><strong>2005<\/strong> VPU Mathematics &amp; IT, Lithuania<\/p>"
+      "modalSize": "md"
     },
     {
       "id": "interests",
       "title": "Interests",
-      "content": "<p class=\"lead\">Active person who enjoys cycling, running and snowboarding. Hobbies include cooking and DIY.<\/p>"
+      "modalSize": "md"
     }
   ]
 }
