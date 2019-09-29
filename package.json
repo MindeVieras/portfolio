@@ -2,13 +2,13 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Portfolio mindelis.com",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev:server": "nodemon index.js",
-    "dev:client": "webpack --config webpack/start.js --watch",
+    "start": "node server/index.js",
+    "dev:server": "nodemon server/index.js",
+    "dev:client": "webpack --config client/webpack/start.js --watch",
     "dev": "concurrently npm:dev:*",
-    "build:client": "webpack --config webpack/build.js --progress",
+    "build:client": "webpack --config client/webpack/build.js --progress",
     "build": "concurrently npm:build:*"
   },
   "repository": {

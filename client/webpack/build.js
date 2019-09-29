@@ -1,19 +1,18 @@
-const webpack = require('webpack');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+var webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
-  devtool: 'eval-source-map',
-  entry: process.cwd() + '/src/js/index.js',
+  mode: 'production',
+  entry: process.cwd() + '/client/js/index.js',
   output: {
     path: process.cwd() + '/public',
     filename: 'scripts.js'
   },
   resolve: {
-    extensions: ['.js'],
-    alias: {
-      handlebars: 'handlebars/dist/handlebars.min.js'
-    }
+    extensions: ['.js']
+  },
+  optimization: {
+    minimize: true
   },
   module: {
     rules: [
@@ -40,7 +39,11 @@ module.exports = {
         test: /\.(png|jpg|gif)$/,
         use: [
           {
-            loader: 'file-loader'
+            loader: 'file-loader',
+            options: {
+              outputPath: 'images',
+              name: '[name].[ext]'
+            }
           }
         ]
       },
@@ -65,13 +68,17 @@ module.exports = {
       'window.jQuery': 'jquery',
       Tether: 'tether'
     }),
-    new BrowserSyncPlugin({
-      notify: false,
-      host: 'localhost',
-      port: 4000,
-      logLevel: 'silent',
-      files: ['./*.hbs'],
-      proxy: 'http://localhost:3000'
-    })
+    new CopyWebpackPlugin([
+      {
+        from: process.cwd() + '/client/images',
+        to: process.cwd() + '/public/images',
+        flatten: false
+      },
+      {
+        from: process.cwd() + '/client/cv',
+        to: process.cwd() + '/public/cv',
+        flatten: false
+      }
+    ])
   ]
 };

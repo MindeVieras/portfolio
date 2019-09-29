@@ -23,11 +23,11 @@ app.engine('.hbs', hbs.engine);
 app.set('view engine', '.hbs');
 
 // Set static dir for public files.
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 // Set all routes to render pizza.
 app.get('*', (req, res) => {
-  const { details, sections } = require('./data.json');
+  const { details, sections } = require('../data.json');
   res.render('pizza', {
     details,
     center: sections[0],
