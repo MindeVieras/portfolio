@@ -1,7 +1,8 @@
 # My portfolio
 
-### Usage
+Build using NodeJS and Express.
 
+### Usage
 
 ### Install all packages
 
@@ -9,7 +10,7 @@
 $ npm install
 ```
 
-### Run dev server
+### Run server
 
 ```sh
 $ npm start
@@ -20,5 +21,3 @@ $ npm start
 ```sh
 $ npm run build
 ```
-
-### All production files are in /dist folder
