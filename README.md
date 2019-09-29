@@ -1,6 +1,6 @@
 # My portfolio
 
-Build using NodeJS and Express.
+Build using NodeJS, Express and Handlebars.
 
 ### Usage
 
@@ -16,7 +16,13 @@ $ npm install
 $ npm start
 ```
 
-### To build production package run
+### Run development environment
+
+```sh
+$ npm run dev
+```
+
+### To build client production package run
 
 ```sh
 $ npm run build

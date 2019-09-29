@@ -1,16 +1,15 @@
-
 // Import bootstrap
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 
-@import "base/mixins";
+@import 'base/mixins';
 
-@import "components/text";
-@import "components/pizza";
-@import "components/modal";
-@import "components/footer";
+@import 'components/text';
+@import 'components/pizza';
+@import 'components/modal';
+@import 'components/footer';
 
-@import "content/skills";
-@import "content/projects";
+@import 'content/skills';
+@import 'content/projects';
 
 body {
   // background: no-repeat center center fixed;
