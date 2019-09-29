@@ -23,7 +23,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Set all routes to render pizza.
 app.get('*', (req, res) => {
-  res.render('pizza');
+  const { details, sections } = require('./data.json');
+  res.render('pizza', {
+    details,
+    center: sections[0],
+    sections
+  });
 });
 
 app.listen(port, () => {

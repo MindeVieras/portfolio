@@ -1,16 +1,11 @@
 import WebFont from 'webfontloader';
 
-import data from '../../data.json';
 import PizzaClass from './pizza';
-
-import centerTemplate from './templates/center.hbs';
-import modalTemplate from './templates/modal.hbs';
 
 export default class Portfolio {
   constructor() {
     // Set initial variables
     this.svgNamespaceURI = 'http://www.w3.org/2000/svg';
-    this.data = data;
     this.windowWidth = window.innerWidth;
     this.windowHeight = window.innerHeight;
     this.mainWrapper = document.getElementById('pizza_wrapper');
@@ -22,30 +17,6 @@ export default class Portfolio {
       this.windowHeight,
       'pizza_svg'
     );
-  }
-
-  loadTemplates() {
-    const { details, sections } = this.data;
-
-    // Load pizza center template
-    const centerSection = sections[0]; // first section for data
-    const center = document.createElementNS(this.svgNamespaceURI, 'g');
-    center.innerHTML = centerTemplate({ ...details, ...centerSection });
-    this.pizzaSVG.appendChild(center);
-
-    // Load modals templates
-    sections.map(section => {
-      let { id, title, modalSize, content } = section;
-      const modal = document.createElement('dialog');
-
-      const template = require('./templates/modalContent/' + id + '.hbs');
-      let data = { id, title, modalSize, content: template };
-
-      modal.innerHTML = modalTemplate(data);
-      this.mainWrapper.appendChild(modal);
-
-      return;
-    });
   }
 
   init() {

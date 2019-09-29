@@ -20,13 +20,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.hbs$/,
-        loader: 'handlebars-loader',
-        query: {
-          partialDirs: process.cwd() + '/src/js/templates/partials'
-        }
-      },
-      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader']

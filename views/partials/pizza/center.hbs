@@ -1,0 +1,29 @@
+<g data-piece id="piece_{{center.id}}">
+
+  <title>{{center.title}}</title>
+  <circle id="pizza_center_circle" fill="#333333"></circle>
+
+  <!-- Center Top text -->
+  <defs>
+    <path id="pizza_center_top_text"></path>
+  </defs>
+  <text x="0" y="0" text-anchor="middle">
+    <textPath id="pizza_center_top_text_path" startOffset="50%" xlink:href="#pizza_center_top_text"
+      style="fill:rgba(204, 200, 200, 0.7);letter-spacing:5px;">
+      {{details.myTitle}}
+    </textPath>
+  </text>
+
+  <!-- Center Bottom text -->
+  <defs>
+    <path id="pizza_center_bottom_text"></path>
+  </defs>
+  <text x="0" y="0" text-anchor="middle">
+    <textPath id="pizza_center_bottom_text_path" startOffset="50%" xlink:href="#pizza_center_bottom_text"
+      style="fill:rgba(204, 200, 200, 0.7);letter-spacing:5px;">
+      {{details.myName}}
+    </textPath>
+  </text>
+
+  <image id="pizza_logo" width="0" height="0" x="0" y="0" xlink:href="/images/logo.png"></image>
+</g>

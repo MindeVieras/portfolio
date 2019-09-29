@@ -8,7 +8,6 @@ import Portfolio from './portfolio';
 const P = new Portfolio();
 
 // main window events
-window.addEventListener('DOMContentLoaded', () => P.loadTemplates());
 window.addEventListener('load', () => P.init());
 window.addEventListener('resize', () => P.onResize());
 window.addEventListener('hashchange', () => P.onHashChange());
