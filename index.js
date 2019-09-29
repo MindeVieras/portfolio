@@ -2,8 +2,12 @@ const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
 
-const hostname = 'localhost';
-const port = 3000;
+// Require variables from .env file if available
+require('dotenv').config();
+
+const HOST = process.env.HOST;
+const PORT = process.env.PORT;
+const DEV = process.env.NODE_ENV === 'development';
 
 const app = express();
 
@@ -31,6 +35,8 @@ app.get('*', (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server running at http://${hostname}:${port}`);
+app.listen(PORT, () => {
+  if (DEV) {
+    console.log(`Server running at http://${HOST}:${PORT}`);
+  }
 });
