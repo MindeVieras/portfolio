@@ -2,13 +2,24 @@ import React, { Component } from 'react';
 
 import PizzaFooter from './PizzaFooter';
 import PizzaCenter from './PizzaCenter';
+import PizzaPiece from './PizzaPiece';
 
-interface PizzaProps {}
+import data from '../../data.json';
+
+export interface PizzaPoint {
+  x: number;
+  y: number;
+}
+
+interface PizzaProps {
+  width: number;
+  height: number;
+}
 
 interface PizzaState {
   width: number;
   height: number;
-  center: {
+  centerDimensions: {
     x: number;
     y: number;
     r: number;
@@ -19,50 +30,41 @@ class Pizza extends Component<PizzaProps, PizzaState> {
   constructor(props: PizzaProps) {
     super(props);
 
+    // Calculate & set state of pizza dimensions
+    let centerRadius = props.height / 5;
+    if (props.height * 2 >= props.width) {
+      centerRadius = props.width / 10;
+    }
+
     this.state = {
-      width: 0,
-      height: 0,
-      center: {
-        x: 0,
-        y: 0,
-        r: 0
+      width: props.width,
+      height: props.height,
+      centerDimensions: {
+        x: props.width / 2,
+        y: props.height / 2,
+        r: centerRadius
       }
     };
   }
 
-  componentDidMount(): void {
-    this.updateDimensions();
-    // Add resize event listener
-    window.addEventListener('resize', this.updateDimensions.bind(this));
-  }
-
-  componentWillUnmount(): void {
-    // Remove resize event listener
-    window.removeEventListener('resize', this.updateDimensions.bind(this));
-  }
-
-  // Calculate & Update state of new dimensions
-  updateDimensions(): void {
-    let centerRadius = window.innerHeight / 5;
-
-    if (window.innerHeight * 2 >= window.innerWidth) {
-      centerRadius = window.innerWidth / 10;
-      // this.middleAlign = 1.3;
-    }
-
-    this.setState({
-      width: window.innerWidth,
-      height: window.innerHeight,
-      center: {
-        x: window.innerWidth / 2,
-        y: window.innerHeight / 2,
-        r: centerRadius
-      }
-    });
-  }
-
   render() {
-    const { width, height } = this.state;
+    const { width, height, centerDimensions } = this.state;
+
+    const { center, pieces } = data;
+    const pizzaPieces = pieces.map((s, i) => {
+      return (
+        <PizzaPiece
+          key={s.id}
+          index={i}
+          total={pieces.length - 1}
+          width={width}
+          height={height}
+          center={centerDimensions}
+          title={s.title}
+          fill={s.fill}
+        />
+      );
+    });
 
     return (
       <div id="pizza_wrapper">
@@ -72,7 +74,9 @@ class Pizza extends Component<PizzaProps, PizzaState> {
           height={height}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <PizzaCenter {...this.state.center} title="Skills" />
+          <PizzaCenter {...centerDimensions} {...center} />
+
+          {pizzaPieces}
         </svg>
 
         <PizzaFooter />
@@ -92,7 +96,7 @@ class Pizza extends Component<PizzaProps, PizzaState> {
             line-height: 1.5;
             color: #212529;
             text-align: left;
-            background-color: black;
+            background-color: #F5F5F5;
             overflow: hidden;
           }
           a {
