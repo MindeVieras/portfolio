@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 
 import { PizzaPoint } from './Pizza';
 
-interface PizzaCenterProps extends PizzaPoint {
-  x: number;
-  y: number;
+export interface PizzaCenterDimensions extends PizzaPoint {
   r: number;
+}
+
+interface PizzaCenterProps extends PizzaCenterDimensions {
   title: string;
   mainTitle: string;
   slogan: string;

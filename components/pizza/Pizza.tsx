@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 
 import PizzaFooter from './PizzaFooter';
 import PizzaCenter from './PizzaCenter';
-import PizzaPiece from './PizzaPiece';
+import PizzaPieces from './PizzaPieces';
 
 import data from '../../data.json';
 
@@ -17,17 +17,6 @@ interface PizzaProps {
 }
 
 class Pizza extends Component<PizzaProps> {
-  getPizzaRadius() {
-    const { width, height } = this.props;
-    const minRes = Math.min(width, height);
-    const maxRes = Math.max(width, height);
-    let radius = minRes / 2;
-
-    console.log(maxRes);
-
-    return radius;
-  }
-
   render() {
     const { width, height } = this.props;
 
@@ -43,30 +32,12 @@ class Pizza extends Component<PizzaProps> {
       r: centerRadius
     };
 
-    const pizzaRadius = this.getPizzaRadius();
-
     const { center, pieces } = data;
-    const pizzaPieces = pieces.map((s, i) => {
-      return (
-        <PizzaPiece
-          key={s.id}
-          index={i}
-          total={pieces.length}
-          svgWidth={width}
-          svgHeight={height}
-          svgCenter={centerDimensions}
-          pizzaRadius={pizzaRadius}
-          title={s.title}
-          fill={s.fill}
-        />
-      );
+
+    pieces.map(p => {
+      const { id, title, fill, size } = p;
+      return { id, title, fill, size };
     });
-
-    // const x = Math.cos(2 * Math.PI * (1 / 3));
-    // const y = Math.sin(2 * Math.PI * (1 / 3));
-
-    // console.log(x);
-    // console.log(y);
 
     return (
       <Fragment>
@@ -76,17 +47,14 @@ class Pizza extends Component<PizzaProps> {
           height={height}
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* <PizzaCenter {...centerDimensions} {...center} /> */}
-
-          <circle
-            r={pizzaRadius}
-            cx={centerDimensions.x}
-            cy={centerDimensions.y}
-            stroke="grey"
-            fill="none"
+          <PizzaPieces
+            pieces={pieces}
+            svgWidth={width}
+            svgHeight={height}
+            centerDimensions={centerDimensions}
           />
 
-          {pizzaPieces}
+          <PizzaCenter {...centerDimensions} {...center} />
         </svg>
 
         <PizzaFooter />
