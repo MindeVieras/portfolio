@@ -18,21 +18,24 @@ interface PieceDataProps {
 }
 
 interface PieceProps extends PieceDataProps {
-  d: string;
+  dots: PizzaPoint[];
+  pizzaRadius: number;
 }
 
 export default class PizzaPieces extends Component<PizzaPiecesProps> {
-  getCoordinatesForPercent = (percent: number) => {
-    const { centerDimensions } = this.props;
-    const pizzaRadius = this.getPizzaRadius();
-    const x =
-      centerDimensions.x - Math.cos(2 * Math.PI * percent) * pizzaRadius;
-    const y =
-      centerDimensions.y - Math.sin(2 * Math.PI * percent) * pizzaRadius;
+  private getCoordinatesForPercent = (
+    percent: number,
+    centerX: number,
+    centerY: number,
+    radius: number
+  ) => {
+    const x = centerX - Math.cos(2 * Math.PI * percent) * radius;
+    const y = centerY - Math.sin(2 * Math.PI * percent) * radius;
+
     return [x, y];
   };
 
-  getPizzaRadius() {
+  private getPizzaRadius() {
     const { svgWidth, svgHeight } = this.props;
     const minRes = Math.min(svgWidth, svgHeight);
     const maxRes = Math.max(svgWidth, svgHeight);
@@ -51,18 +54,30 @@ export default class PizzaPieces extends Component<PizzaPiecesProps> {
       // If the slice is more than 50%, take the large arc (the long way around).
       // const largeArcFlag = slice.percent > .5 ? 1 : 0;
 
-      const [startX, startY] = this.getCoordinatesForPercent(i / totalPieces);
-      const [endX, endY] = this.getCoordinatesForPercent((i + 1) / totalPieces);
+      const [startX, startY] = this.getCoordinatesForPercent(
+        i / totalPieces,
+        centerDimensions.x,
+        centerDimensions.y,
+        pizzaRadius
+      );
+
+      const [endX, endY] = this.getCoordinatesForPercent(
+        (i + 1) / totalPieces,
+        centerDimensions.x,
+        centerDimensions.y,
+        pizzaRadius
+      );
 
       // Create an array and join it just for code readability.
-      const pathData = [
-        `M ${centerDimensions.x},${centerDimensions.y}`,
-        `L ${startX},${startY}`,
-        `A ${pizzaRadius},${pizzaRadius} 0 0 1 ${endX} ${endY}`,
-        `Z`
-      ].join(' ');
+      const dotsData = [
+        { x: centerDimensions.x, y: centerDimensions.y },
+        { x: startX, y: startY },
+        { x: endX, y: endY }
+      ];
 
-      return <Piece key={p.id} {...p} d={pathData} />;
+      return (
+        <Piece key={p.id} {...p} pizzaRadius={pizzaRadius} dots={dotsData} />
+      );
     });
 
     return (
@@ -82,11 +97,19 @@ export default class PizzaPieces extends Component<PizzaPiecesProps> {
 
 class Piece extends Component<PieceProps> {
   render() {
-    const { fill, d } = this.props;
+    const { fill, pizzaRadius, dots } = this.props;
+
+    // Create an array and join it just for code readability.
+    const pathData = [
+      `M ${dots[0].x},${dots[0].y}`,
+      `L ${dots[1].x},${dots[1].y}`,
+      `A ${pizzaRadius},${pizzaRadius} 0 0 1 ${dots[2].x} ${dots[2].y}`,
+      `Z`
+    ].join(' ');
 
     return (
       <g>
-        <path fill={fill} d={d} />
+        <path fill={fill} d={pathData} />
       </g>
     );
   }

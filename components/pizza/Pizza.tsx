@@ -54,7 +54,7 @@ class Pizza extends Component<PizzaProps> {
             centerDimensions={centerDimensions}
           />
 
-          <PizzaCenter {...centerDimensions} {...center} />
+          {/* <PizzaCenter {...centerDimensions} {...center} /> */}
         </svg>
 
         <PizzaFooter />
