@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { PizzaPoint } from './Pizza';
 
 interface PizzaCenterProps extends PizzaPoint {
+  x: number;
+  y: number;
   r: number;
   title: string;
   mainTitle: string;
@@ -21,9 +23,9 @@ export default class PizzaCenter extends Component<PizzaCenterProps> {
       title,
       mainTitle,
       slogan,
-      fill,
       logo,
-      logoSizeRatio
+      logoSizeRatio,
+      fill
     } = this.props;
 
     const logoSize = r * (logoSizeRatio || 1.7);

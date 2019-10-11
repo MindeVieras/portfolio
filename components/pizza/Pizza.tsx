@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import PizzaFooter from './PizzaFooter';
 import PizzaCenter from './PizzaCenter';
@@ -16,39 +16,34 @@ interface PizzaProps {
   height: number;
 }
 
-interface PizzaState {
-  width: number;
-  height: number;
-  centerDimensions: {
-    x: number;
-    y: number;
-    r: number;
-  };
-}
+class Pizza extends Component<PizzaProps> {
+  getPizzaRadius() {
+    const { width, height } = this.props;
+    const minRes = Math.min(width, height);
+    const maxRes = Math.max(width, height);
+    let radius = minRes / 2;
 
-class Pizza extends Component<PizzaProps, PizzaState> {
-  constructor(props: PizzaProps) {
-    super(props);
+    console.log(maxRes);
 
-    // Calculate & set state of pizza dimensions
-    let centerRadius = props.height / 5;
-    if (props.height * 2 >= props.width) {
-      centerRadius = props.width / 10;
-    }
-
-    this.state = {
-      width: props.width,
-      height: props.height,
-      centerDimensions: {
-        x: props.width / 2,
-        y: props.height / 2,
-        r: centerRadius
-      }
-    };
+    return radius;
   }
 
   render() {
-    const { width, height, centerDimensions } = this.state;
+    const { width, height } = this.props;
+
+    // Calculate & set state of pizza dimensions
+    let centerRadius = height / 5;
+    if (height * 2 >= width) {
+      centerRadius = width / 10;
+    }
+
+    const centerDimensions = {
+      x: width / 2,
+      y: height / 2,
+      r: centerRadius
+    };
+
+    const pizzaRadius = this.getPizzaRadius();
 
     const { center, pieces } = data;
     const pizzaPieces = pieces.map((s, i) => {
@@ -56,25 +51,40 @@ class Pizza extends Component<PizzaProps, PizzaState> {
         <PizzaPiece
           key={s.id}
           index={i}
-          total={pieces.length - 1}
-          width={width}
-          height={height}
-          center={centerDimensions}
+          total={pieces.length}
+          svgWidth={width}
+          svgHeight={height}
+          svgCenter={centerDimensions}
+          pizzaRadius={pizzaRadius}
           title={s.title}
           fill={s.fill}
         />
       );
     });
 
+    // const x = Math.cos(2 * Math.PI * (1 / 3));
+    // const y = Math.sin(2 * Math.PI * (1 / 3));
+
+    // console.log(x);
+    // console.log(y);
+
     return (
-      <div id="pizza_wrapper">
+      <Fragment>
         <svg
           id="pizza_svg"
           width={width}
           height={height}
           xmlns="http://www.w3.org/2000/svg"
         >
-          <PizzaCenter {...centerDimensions} {...center} />
+          {/* <PizzaCenter {...centerDimensions} {...center} /> */}
+
+          <circle
+            r={pizzaRadius}
+            cx={centerDimensions.x}
+            cy={centerDimensions.y}
+            stroke="grey"
+            fill="none"
+          />
 
           {pizzaPieces}
         </svg>
@@ -119,7 +129,7 @@ class Pizza extends Component<PizzaProps, PizzaState> {
             border: 0;
           }
         `}</style>
-      </div>
+      </Fragment>
     );
   }
 }

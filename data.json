@@ -16,6 +16,7 @@
       "id": "summary",
       "title": "Summary",
       "fill": "#545454",
+      "size": 8,
       "modalSize": "lg",
       "content": "<p class=\"lead\">Motivated experienced Web Developer seeking a career in a dynamic software development team. Highly competent front-end development skills, with an emphasis on JavaScript and its libraries (ReactJS, jQuery). Confident back-end development skills, especially using PHP and NodeJS.</p><p class=\"lead\">Self-taught, with a real interest in keeping up-to-date with the latest web standards, languages and methods. Makes extensive use of tools such as Git, Webpack, Grunt to boost productivity and achieve the best results possible. A deep understanding of how computers and the internet works. High level of technical and networking skills.</p>"
     },
@@ -23,6 +24,7 @@
       "id": "projects",
       "title": "Projects",
       "fill": "#444444",
+      "size": 5,
       "modalSize": "lg",
       "content": "<ul class=\"list-unstyled\"> <li class=\"media mt-3 mb-5\"> <a href=\"https://www.almondsbury.co.uk\" target=\"_blank\"><img src=\"/images/almond_logo.png\" class=\"mr-3 logo\" alt=\"Almondsbury\"/></a> <div class=\"media-body\"> <h5 class=\"mt-0\">Almondsbury</h5> <p class=\"mb-1\">Garden center project build on Drupal 8. A unique feature is to show specific block based on time schedule and weather conditions.</p><a class=\"project-link\" href=\"https://www.almondsbury.co.uk\" target=\"_blank\">Go to site...</a> </div></li><li class=\"media mb-5\"> <a href=\"https://www.makemyblinds.co.uk\" target=\"_blank\"><img src=\"/images/mmb_logo.svg\" class=\"mr-3 logo\" alt=\"Make my blinds\"/></a> <div class=\"media-body\"> <h5 class=\"mt-0\">Make My Blinds</h5> <p class=\"mb-1\">Magento 2 online shop. Capable of selling blinds of custom measurements. Loads of other custom functionality.</p><a class=\"project-link\" href=\"https://www.makemyblinds.co.uk\" target=\"_blank\">Go to site...</a> </div></li><li class=\"media mb-5\"> <a href=\"https://www.ascenti.co.uk\" target=\"_blank\"><img src=\"/images/ascenti_logo.svg\" class=\"mr-3 logo\" alt=\"Ascenti\"/></a> <div class=\"media-body\"> <h5 class=\"mt-0\">Ascenti</h5> <p class=\"mb-1\">Drupal 8 project. System to manage cliniks across UK. Frontend clinic finder APP build using React.</p><a class=\"project-link\" href=\"https://www.ascenti.co.uk\" target=\"_blank\">Go to site...</a> </div></li><li class=\"media mb-5\"> <a href=\"https://www.noahsarkzoofarm.co.uk\" target=\"_blank\"><img src=\"/images/noahs_logo.jpg\" class=\"mr-3 logo\" alt=\"Noah's Ark Zoo Farm\"/></a> <div class=\"media-body\"> <h5 class=\"mt-0\">Noah's Ark Zoo Farm</h5> <p class=\"mb-1\">Custom build CMS to manage animals in the zoo. Build using FatFree PHP framework, as well as frontend development using given design files.</p><a class=\"project-link\" href=\"https://www.noahsarkzoofarm.co.uk\" target=\"_blank\">Go to site...</a> </div></li><li class=\"media mb-5\"> <div class=\"mr-3 logo\" style=\"color:#9013FE;font-size:19px;line-height:1.25;text-align:center;font-weight:bold\"> <a href=\"https://thefuturescentre.org\" target=\"_blank\">Futures Centre</a> </div><div class=\"media-body\"> <h5 class=\"mt-0\">Futures Centre</h5> <p class=\"mb-1\">Users share their opinions and posts comments based on their experiences. Drupal website created from design files. A lot of frontend and backend functionality is done. Overall amazing look and feel UI/UX achieved.</p><a class=\"project-link\" href=\"https://thefuturescentre.org\" target=\"_blank\">Go to site...</a> </div></li><li class=\"media mb-5\"> <a href=\"https://www.foodanddrinkguides.co.uk/\" target=\"_blank\"><img src=\"/images/fand_logo.png\" class=\"mr-3 logo\" alt=\"Food &amp; Drink\"/></a> <div class=\"media-body\"> <h5 class=\"mt-0\">Food &amp; Drink</h5> <p class=\"mb-1\">Main goal and purpose achieved. Fully responsive eye catchy website created. Drupal template developed from Sketch design provided.</p><a class=\"project-link\" href=\"https://www.foodanddrinkguides.co.uk/\" target=\"_blank\">Go to site...</a> </div></li><li class=\"media mb-5\"> <a href=\"https://e.jovaitas.lt\" target=\"_blank\"><img src=\"/images/jovaitas_logo.png\" class=\"mr-3 logo\" alt=\"Jovaitas\"/></a> <div class=\"media-body\"> <h5 class=\"mt-0\">Jovaitas</h5> <p class=\"mb-1\">A freelance project built using Drupal Commerce. Design and functionality were created in order to meet all client requirements.</p><a class=\"project-link\" href=\"https://e.jovaitas.lt\" target=\"_blank\">Go to site...</a> </div></li><li class=\"media mb-5\"> <a href=\"http://www.segris.lt/pramogos\" target=\"_blank\"><img src=\"/images/pramogos_logo.png\" class=\"mr-3 logo\" alt=\"Entertainment\"/></a> <div class=\"media-body\"> <h5 class=\"mt-0\">Entertainment</h5> <p class=\"mb-1\">Dynamic website built by Drupal 7. A template is coded in order to meet the client\u2019s requirements. To boost the best performance criteria used only the minimum of plugins and extra functionality was hard coded.</p><a class=\"project-link\" href=\"http://www.segris.lt/pramogos\" target=\"_blank\">Go to site...</a> </div></li><li class=\"media\"> <a href=\"http://e.segris.lt\" target=\"_blank\"><img src=\"/images/segris_logo.png\" class=\"mr-3 logo\" alt=\"Segris\"/></a> <div class=\"media-body\"> <h5 class=\"mt-0\">Segris</h5> <p class=\"mb-1\">Redesigned the Opencart online shop. Great considerable efforts made for the major development of website design, layout and responsiveness achieved.</p><a class=\"project-link\" href=\"http://e.segris.lt\" target=\"_blank\">Go to site...</a> </div></li></ul>"
     },
@@ -30,6 +32,7 @@
       "id": "experience",
       "title": "Experience",
       "fill": "#7a7a7a",
+      "size": 5,
       "modalSize": "lg",
       "content": "<div class=\"mt-3 mb-5\"> <p class=\"h4\"><strong>10/16 - 02/19</strong> Software Developer at <strong>Creation Media</strong>, Bristol</p><p class=\"lead\">Building and maintaining Drupal, WordPress, Magento and custom platforms. Taking care of full-stack responsibilities as well as managing AWS and common LAMP stack. Writing extensive API's. Working collaboratively with a team.</p></div><div class=\"mb-5\"> <p class=\"h4\"><strong>01/16 - 10/16</strong> Web Developer at <strong>Southmedia Ltd.</strong>, Bristol</p><p class=\"lead\">Responsible for front-end and back-end development of Drupal or WordPress CMS. Typically working from designs, but often given free rein on improving existing websites. Whether working individually or with a small team and constantly striving to operate within timescales and hit targets.</p></div><div class=\"mb-5\"> <p class=\"h4\"><strong>03/13 \u2013 12/15 freelancing web designer/developer</strong></p><p class=\"lead\">Creating websites with Drupal, developing themes and modules. Building SPA's with Angular1. Maintaining already build systems. Constantly working with HTML, CSS and JS. Experience with MVC pattern. Creating designs with Adobe suite.</p></div><div> <p class=\"h4\"><strong>06/10 - 12/12</strong> Leader, developer. <strong>Electric-Shop-Online</strong>, Lithuania</p><p class=\"lead\">Maintaining the main online shop. Repairing, installing and maintaining consumer grade digital equipment.</p></div>"
     },
@@ -37,6 +40,7 @@
       "id": "expertise",
       "title": "Expertise",
       "fill": "#545454",
+      "size": 5,
       "modalSize": "md",
       "content": "<div class=\"row\"> <div class=\"col-sm\"> <p class=\"lead\">Code quality</p><p class=\"lead\">Automation tools</p><p class=\"lead\">E-commerce</p><p class=\"lead\">Latest standards</p></div><div class=\"col-sm\"> <p class=\"lead\">Documentation</p><p class=\"lead\">Product vision</p><p class=\"lead\">Managing change</p><p class=\"lead\">Technical skills</p></div></div>"
     },
@@ -44,6 +48,7 @@
       "id": "education",
       "title": "Education",
       "fill": "#444444",
+      "size": 5,
       "modalSize": "md",
       "content": "<p class=\"lead\"><strong>2009</strong> CCNA/CISCO South West College Enniskillen Campus, Northern Ireland</p><p class=\"lead\"><strong>2005</strong> VPU Mathematics &amp; IT, Lithuania</p>"
     },
@@ -51,6 +56,7 @@
       "id": "interests",
       "title": "Interests",
       "fill": "#7a7a7a",
+      "size": 5,
       "modalSize": "md",
       "content": "<p class=\"lead\">Active person who enjoys cycling, running and snowboarding. Hobbies include cooking and DIY.</p>"
     }

@@ -3,71 +3,60 @@ import React, { Component } from 'react';
 import { PizzaPoint } from './Pizza';
 
 interface PizzaPieceProps {
+  title?: string;
+  fill?: string;
   index: number;
   total: number;
-  width: number;
-  height: number;
-  center: {
+  svgWidth: number;
+  svgHeight: number;
+  svgCenter: {
     x: number;
     y: number;
     r: number;
   };
-  title?: string;
-  fill?: string;
+  pizzaRadius: number;
 }
 
 interface PizzaPieceState {
-  startPoint: PizzaPoint;
-  perimeter: number;
-  perimeterPart: number;
+  // startDeg: number;
+  // pieceDeg: number;
+  // startPoint: PizzaPoint;
+  // perimeter: number;
+  // perimeterPart: number;
 }
 
 class PizzaPiece extends Component<PizzaPieceProps, PizzaPieceState> {
   constructor(props: PizzaPieceProps) {
     super(props);
-
-    // Set pizza perimeter.
-    const perimeter = (props.width + props.height) * 2;
-
-    this.state = {
-      // Set starting point on the middle of the left edge of the pizza wrapper.
-      startPoint: {
-        x: 0,
-        y: props.height / 2
-      },
-      // Set the lenght of piece edge on perimeter.
-      perimeterPart: perimeter / props.total,
-      perimeter
-    };
   }
 
-  getPointOnPerimeter = (index: number): PizzaPoint => {
-    // const { perimeter } = this.state;
-    return {
-      x: 10,
-      y: 20
-    };
+  getCoordinatesForPercent = (percent: number) => {
+    const { pizzaRadius, svgCenter } = this.props;
+    const x = svgCenter.x - Math.cos(2 * Math.PI * percent) * pizzaRadius;
+    const y = svgCenter.y - Math.sin(2 * Math.PI * percent) * pizzaRadius;
+    return [x, y];
   };
 
   render() {
-    const { index, fill, center } = this.props;
-    const { perimeterPart } = this.state;
+    const { index, total, fill, svgCenter, pizzaRadius } = this.props;
 
-    const partPlus = perimeterPart * index;
+    // If the slice is more than 50%, take the large arc (the long way around).
+    // const largeArcFlag = slice.percent > .5 ? 1 : 0;
 
-    console.log(this.getPointOnPerimeter(index));
+    const [startX, startY] = this.getCoordinatesForPercent(index / total);
+    const [endX, endY] = this.getCoordinatesForPercent((index + 1) / total);
+
+    // Create an array and join it just for code readability.
+    const pathData = [
+      `M ${svgCenter.x},${svgCenter.y}`,
+      `L ${startX},${startY}`,
+      `A ${pizzaRadius},${pizzaRadius} 0 0 1 ${endX} ${endY}`,
+      `Z`
+    ].join(' ');
 
     return (
-      <g id={`piece_${index}`}>
-        <path
-          fill={fill}
-          d={`
-            M ${center.x} ${center.y}
-            L 756 361
-            L 756 0
-            Z
-          `}
-        />
+      <g>
+        <path fill={fill} d={pathData} />
       </g>
     );
   }
