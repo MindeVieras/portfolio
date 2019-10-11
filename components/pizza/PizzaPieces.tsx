@@ -20,6 +20,7 @@ interface PieceDataProps {
 interface PieceProps extends PieceDataProps {
   dots: PizzaPoint[];
   pizzaRadius: number;
+  oversized: boolean;
 }
 
 export default class PizzaPieces extends Component<PizzaPiecesProps> {
@@ -46,23 +47,27 @@ export default class PizzaPieces extends Component<PizzaPiecesProps> {
 
   render() {
     const { centerDimensions, pieces } = this.props;
-
-    const totalPieces = pieces.length;
     const pizzaRadius = this.getPizzaRadius();
+
+    const sizes = pieces.map(p => p.size);
+    const sizesTotal = sizes.reduce((a, b) => a + b);
+
+    let cumulativeSize = 0;
 
     const renderPieces = pieces.map((p, i) => {
       // If the slice is more than 50%, take the large arc (the long way around).
-      // const largeArcFlag = slice.percent > .5 ? 1 : 0;
+      const oversized = p.size / sizesTotal > 0.5;
 
       const [startX, startY] = this.getCoordinatesForPercent(
-        i / totalPieces,
+        cumulativeSize / sizesTotal,
         centerDimensions.x,
         centerDimensions.y,
         pizzaRadius
       );
 
+      cumulativeSize += sizes[i];
       const [endX, endY] = this.getCoordinatesForPercent(
-        (i + 1) / totalPieces,
+        cumulativeSize / sizesTotal,
         centerDimensions.x,
         centerDimensions.y,
         pizzaRadius
@@ -76,7 +81,13 @@ export default class PizzaPieces extends Component<PizzaPiecesProps> {
       ];
 
       return (
-        <Piece key={p.id} {...p} pizzaRadius={pizzaRadius} dots={dotsData} />
+        <Piece
+          key={p.id}
+          {...p}
+          pizzaRadius={pizzaRadius}
+          dots={dotsData}
+          oversized={oversized}
+        />
       );
     });
 
@@ -97,13 +108,15 @@ export default class PizzaPieces extends Component<PizzaPiecesProps> {
 
 class Piece extends Component<PieceProps> {
   render() {
-    const { fill, pizzaRadius, dots } = this.props;
+    const { fill, pizzaRadius, dots, oversized } = this.props;
 
     // Create an array and join it just for code readability.
     const pathData = [
       `M ${dots[0].x},${dots[0].y}`,
       `L ${dots[1].x},${dots[1].y}`,
-      `A ${pizzaRadius},${pizzaRadius} 0 0 1 ${dots[2].x} ${dots[2].y}`,
+      `A ${pizzaRadius},${pizzaRadius} 0 ${oversized ? 1 : 0} 1 ${dots[2].x} ${
+        dots[2].y
+      }`,
       `Z`
     ].join(' ');
 
