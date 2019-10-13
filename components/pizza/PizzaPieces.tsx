@@ -40,7 +40,10 @@ export default class PizzaPieces extends Component<PizzaPiecesProps> {
     const { svgWidth, svgHeight } = this.props;
     const minRes = Math.min(svgWidth, svgHeight);
     const maxRes = Math.max(svgWidth, svgHeight);
-    let radius = minRes / 2;
+
+    let radius = 0;
+
+    radius = Math.sqrt(Math.pow(minRes / 2, 2) + Math.pow(maxRes / 2, 2));
 
     return radius;
   }
@@ -93,14 +96,15 @@ export default class PizzaPieces extends Component<PizzaPiecesProps> {
 
     return (
       <Fragment>
+        {renderPieces}
         <circle
           r={pizzaRadius}
           cx={centerDimensions.x}
           cy={centerDimensions.y}
-          stroke="grey"
+          stroke="black"
+          strokeWidth={1}
           fill="none"
         />
-        {renderPieces}
       </Fragment>
     );
   }
