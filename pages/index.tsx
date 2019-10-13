@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
 // Disable ssr for Pizza in order to get browser window.
@@ -33,9 +34,18 @@ class Home extends Component {
 
   render() {
     return (
-      <div id="pizza_wrapper">
-        <Pizza width={this.state.width} height={this.state.height} />
-      </div>
+      <Fragment>
+        <Head>
+          <title>Portfolio | Minde Vieras</title>
+          <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          />
+        </Head>
+        <div id="pizza_wrapper">
+          <Pizza width={this.state.width} height={this.state.height} />
+        </div>
+      </Fragment>
     );
   }
 }

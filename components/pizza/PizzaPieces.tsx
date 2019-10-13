@@ -127,7 +127,14 @@ export default class PizzaPieces extends Component<PizzaPiecesProps> {
 
 class Piece extends Component<PieceProps> {
   render() {
-    const { fill, pizzaRadius, centerRadius, dots, oversized } = this.props;
+    const {
+      fill,
+      title,
+      pizzaRadius,
+      centerRadius,
+      dots,
+      oversized
+    } = this.props;
 
     // Create an array and join it just for code readability.
     const pathData = [
@@ -142,17 +149,30 @@ class Piece extends Component<PieceProps> {
       `Z`
     ].join(' ');
 
+    // Text points.
+    let textX: number = 0;
+    let textY: number = 0;
+
     return (
       <Fragment>
         <g>
+          <text x={textX} y={textY} textAnchor="middle">
+            {title}
+          </text>
           <path fill={fill} d={pathData} />
         </g>
         <style jsx>{`
           g {
             cursor: pointer;
+            font-size: ${centerRadius / 2.5}px;
           }
           g:hover path {
             opacity: 0.1;
+          }
+          text {
+            font-weight: lighter;
+            font-family: 'Play', sans-serif;
+            fill: rgba(204, 200, 200, 0.5);
           }
           path {
             opacity: 0.4;

@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import WebFont from 'webfontloader';
 
 import PizzaFooter from './PizzaFooter';
 import PizzaCenter from './PizzaCenter';
@@ -17,6 +18,15 @@ interface PizzaProps {
 }
 
 class Pizza extends Component<PizzaProps> {
+  componentDidMount() {
+    // Load all fonts
+    WebFont.load({
+      google: {
+        families: ['Play:400,700']
+      }
+    });
+  }
+
   render() {
     const { width, height } = this.props;
 
@@ -63,17 +73,7 @@ class Pizza extends Component<PizzaProps> {
         {/* <dialog>{{> pizza/modal}}</dialog> */}
         {/* {{/each}} */}
         <style jsx global>{`
-          *, *::before, *::after {
-            box-sizing: border-box;
-          }
           body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5;
-            color: #212529;
-            text-align: left;
             background-color: #000;
             overflow: hidden;
           }
