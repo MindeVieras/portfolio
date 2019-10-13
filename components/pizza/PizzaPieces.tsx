@@ -89,8 +89,16 @@ export default class PizzaPieces extends Component<PizzaPiecesProps> {
         centerDimensions.r
       );
 
+      const [textX, textY] = this.getCoordinatesForPercent(
+        (cumulativeSize - sizes[i] / 2) / sizesTotal,
+        centerDimensions.x,
+        centerDimensions.y,
+        centerDimensions.r + 100
+      );
+
       // Create an array and join it just for code readability.
       const dotsData = [
+        { x: textX, y: textY }, // First item in array is for text coordinates.
         { x: startX, y: startY },
         { x: endX, y: endY },
         { x: centerEndX, y: centerEndY },
@@ -136,22 +144,22 @@ class Piece extends Component<PieceProps> {
       oversized
     } = this.props;
 
+    // Text points.
+    const textX = dots[0].x;
+    const textY = dots[0].y;
+
     // Create an array and join it just for code readability.
     const pathData = [
-      `M ${dots[0].x},${dots[0].y}`,
-      `A ${pizzaRadius},${pizzaRadius} 0 ${oversized ? 1 : 0} 1 ${dots[1].x} ${
-        dots[1].y
+      `M ${dots[1].x},${dots[1].y}`,
+      `A ${pizzaRadius},${pizzaRadius} 0 ${oversized ? 1 : 0} 1 ${dots[2].x} ${
+        dots[2].y
       }`,
-      `L ${dots[2].x},${dots[2].y}`,
+      `L ${dots[3].x},${dots[3].y}`,
       `A ${centerRadius},${centerRadius} 0 ${oversized ? 1 : 0} 0 ${
-        dots[3].x
-      } ${dots[3].y}`,
+        dots[4].x
+      } ${dots[4].y}`,
       `Z`
     ].join(' ');
-
-    // Text points.
-    let textX: number = 0;
-    let textY: number = 0;
 
     return (
       <Fragment>
