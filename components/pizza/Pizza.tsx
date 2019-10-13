@@ -54,7 +54,7 @@ class Pizza extends Component<PizzaProps> {
             centerDimensions={centerDimensions}
           />
 
-          {/* <PizzaCenter {...centerDimensions} {...center} /> */}
+          <PizzaCenter {...centerDimensions} {...center} />
         </svg>
 
         <PizzaFooter />
@@ -74,7 +74,7 @@ class Pizza extends Component<PizzaProps> {
             line-height: 1.5;
             color: #212529;
             text-align: left;
-            background-color: #F5F5F5;
+            background-color: #000;
             overflow: hidden;
           }
           a {
@@ -85,16 +85,6 @@ class Pizza extends Component<PizzaProps> {
               text-decoration: none;
               color: inherit;
             }
-          }
-          .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
           }
         `}</style>
       </Fragment>

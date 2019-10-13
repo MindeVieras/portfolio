@@ -20,6 +20,7 @@ interface PieceDataProps {
 interface PieceProps extends PieceDataProps {
   dots: PizzaPoint[];
   pizzaRadius: number;
+  centerRadius: number;
   oversized: boolean;
 }
 
@@ -67,6 +68,12 @@ export default class PizzaPieces extends Component<PizzaPiecesProps> {
         centerDimensions.y,
         pizzaRadius
       );
+      const [centerStartX, centerStartY] = this.getCoordinatesForPercent(
+        cumulativeSize / sizesTotal,
+        centerDimensions.x,
+        centerDimensions.y,
+        centerDimensions.r
+      );
 
       cumulativeSize += sizes[i];
       const [endX, endY] = this.getCoordinatesForPercent(
@@ -75,12 +82,19 @@ export default class PizzaPieces extends Component<PizzaPiecesProps> {
         centerDimensions.y,
         pizzaRadius
       );
+      const [centerEndX, centerEndY] = this.getCoordinatesForPercent(
+        cumulativeSize / sizesTotal,
+        centerDimensions.x,
+        centerDimensions.y,
+        centerDimensions.r
+      );
 
       // Create an array and join it just for code readability.
       const dotsData = [
-        { x: centerDimensions.x, y: centerDimensions.y },
         { x: startX, y: startY },
-        { x: endX, y: endY }
+        { x: endX, y: endY },
+        { x: centerEndX, y: centerEndY },
+        { x: centerStartX, y: centerStartY }
       ];
 
       return (
@@ -88,6 +102,7 @@ export default class PizzaPieces extends Component<PizzaPiecesProps> {
           key={p.id}
           {...p}
           pizzaRadius={pizzaRadius}
+          centerRadius={centerDimensions.r}
           dots={dotsData}
           oversized={oversized}
         />
@@ -112,22 +127,39 @@ export default class PizzaPieces extends Component<PizzaPiecesProps> {
 
 class Piece extends Component<PieceProps> {
   render() {
-    const { fill, pizzaRadius, dots, oversized } = this.props;
+    const { fill, pizzaRadius, centerRadius, dots, oversized } = this.props;
 
     // Create an array and join it just for code readability.
     const pathData = [
       `M ${dots[0].x},${dots[0].y}`,
-      `L ${dots[1].x},${dots[1].y}`,
-      `A ${pizzaRadius},${pizzaRadius} 0 ${oversized ? 1 : 0} 1 ${dots[2].x} ${
-        dots[2].y
+      `A ${pizzaRadius},${pizzaRadius} 0 ${oversized ? 1 : 0} 1 ${dots[1].x} ${
+        dots[1].y
       }`,
+      `L ${dots[2].x},${dots[2].y}`,
+      `A ${centerRadius},${centerRadius} 0 ${oversized ? 1 : 0} 0 ${
+        dots[3].x
+      } ${dots[3].y}`,
       `Z`
     ].join(' ');
 
     return (
-      <g>
-        <path fill={fill} d={pathData} />
-      </g>
+      <Fragment>
+        <g>
+          <path fill={fill} d={pathData} />
+        </g>
+        <style jsx>{`
+          g {
+            cursor: pointer;
+          }
+          g:hover path {
+            opacity: 0.1;
+          }
+          path {
+            opacity: 0.4;
+            transition: opacity 0.3s ease;
+          }
+        `}</style>
+      </Fragment>
     );
   }
 }
