@@ -18,6 +18,7 @@ interface PieceDataProps {
 }
 
 interface PieceProps extends PieceDataProps {
+  index: number;
   dots: PizzaPoint[];
   pizzaRadius: number;
   centerRadius: number;
@@ -93,7 +94,7 @@ export default class PizzaPieces extends Component<PizzaPiecesProps> {
         (cumulativeSize - sizes[i] / 2) / sizesTotal,
         centerDimensions.x,
         centerDimensions.y,
-        centerDimensions.r + 100
+        centerDimensions.r + pizzaRadius / 4
       );
 
       // Create an array and join it just for code readability.
@@ -109,6 +110,7 @@ export default class PizzaPieces extends Component<PizzaPiecesProps> {
         <Piece
           key={p.id}
           {...p}
+          index={i}
           pizzaRadius={pizzaRadius}
           centerRadius={centerDimensions.r}
           dots={dotsData}
@@ -138,6 +140,7 @@ class Piece extends Component<PieceProps> {
     const {
       fill,
       title,
+      index,
       pizzaRadius,
       centerRadius,
       dots,
@@ -163,10 +166,11 @@ class Piece extends Component<PieceProps> {
 
     return (
       <Fragment>
-        <g>
+        <g tabIndex={index}>
           <text x={textX} y={textY} textAnchor="middle">
             {title}
           </text>
+          <circle cx={textX} cy={textY} r={5} stroke="red" />
           <path fill={fill} d={pathData} />
         </g>
         <style jsx>{`

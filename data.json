@@ -13,6 +13,14 @@
   },
   "pieces": [
     {
+      "id": "interests",
+      "title": "Interests",
+      "fill": "#7a7a7a",
+      "size": 5,
+      "modalSize": "md",
+      "content": "<p class=\"lead\">Active person who enjoys cycling, running and snowboarding. Hobbies include cooking and DIY.</p>"
+    },
+    {
       "id": "summary",
       "title": "Summary",
       "fill": "#545454",
@@ -51,14 +59,6 @@
       "size": 5,
       "modalSize": "md",
       "content": "<p class=\"lead\"><strong>2009</strong> CCNA/CISCO South West College Enniskillen Campus, Northern Ireland</p><p class=\"lead\"><strong>2005</strong> VPU Mathematics &amp; IT, Lithuania</p>"
-    },
-    {
-      "id": "interests",
-      "title": "Interests",
-      "fill": "#7a7a7a",
-      "size": 5,
-      "modalSize": "md",
-      "content": "<p class=\"lead\">Active person who enjoys cycling, running and snowboarding. Hobbies include cooking and DIY.</p>"
     }
   ]
 }

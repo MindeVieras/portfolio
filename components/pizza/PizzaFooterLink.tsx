@@ -26,9 +26,9 @@ class PizzaFooterIcon extends Component<PizzaFooterIconProps> {
             }
           }
           .icon {
-            height: 48px;
             font-size: 48px;
             color: rgba(204,204,204,.5);
+            line-height: 1;
             cursor: pointer;
             transition: all 0.25s ease;
           }
