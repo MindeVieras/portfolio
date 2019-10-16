@@ -1,27 +1,36 @@
 import React, { Component, Fragment } from 'react';
 
-interface PizzaFooterIconProps {
+import Icon from '../Icon';
+
+export interface PizzaFooterLinkProps {
+  target?: string;
   title: string;
   href: string;
-  icon: JSX.Element;
-  target?: string;
+  icon: string;
+  weight: number;
 }
 
-class PizzaFooterIcon extends Component<PizzaFooterIconProps> {
+class PizzaFooterIcon extends Component<PizzaFooterLinkProps> {
   render() {
     const { title, href, icon, target } = this.props;
 
     return (
       <Fragment>
         <a href={href} target={target} title={title} className="footer-link">
-          <div className="icon">{icon}</div>
+          <div className="icon">
+            <Icon icon={icon} />
+          </div>
         </a>
 
         <style jsx>{`
           a {
             margin: 0 10px;
           }
-          a:hover .icon {
+          a:focus {
+            outline: 0;
+          }
+          a:hover .icon,
+          a:focus .icon {
               color: rgba(200,200,200,.9);
             }
           }

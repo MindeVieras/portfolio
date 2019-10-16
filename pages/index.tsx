@@ -1,6 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
+import PizzaFooter from '../components/pizza/PizzaFooter';
+
+import { socialLinks } from '../data.json';
 
 // Disable ssr for Pizza in order to get browser window.
 const Pizza = dynamic(() => import('../components/pizza/Pizza'), {
@@ -44,6 +47,7 @@ class Home extends Component {
         </Head>
         <div id="pizza_wrapper">
           <Pizza width={this.state.width} height={this.state.height} />
+          <PizzaFooter links={socialLinks} />
         </div>
       </Fragment>
     );

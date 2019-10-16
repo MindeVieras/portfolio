@@ -178,7 +178,11 @@ class Piece extends Component<PieceProps> {
             cursor: pointer;
             font-size: ${centerRadius / 2.5}px;
           }
-          g:hover path {
+          g:focus {
+            outline: 0;
+          }
+          g:hover path,
+          g:focus path {
             opacity: 0.1;
           }
           text {

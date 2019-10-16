@@ -1,7 +1,7 @@
 {
   "center": {
     "id": "skills",
-    "enabled": true,
+    "radius": 0.7,
     "title": "Skills",
     "fill": "#333333",
     "mainTitle": "Minde Vieras",
@@ -59,6 +59,41 @@
       "size": 5,
       "modalSize": "md",
       "content": "<p class=\"lead\"><strong>2009</strong> CCNA/CISCO South West College Enniskillen Campus, Northern Ireland</p><p class=\"lead\"><strong>2005</strong> VPU Mathematics &amp; IT, Lithuania</p>"
+    }
+  ],
+  "socialLinks": [
+    {
+      "title": "Email me",
+      "href": "mailto:mindevieras@gmail.com",
+      "icon": "FaEnvelope",
+      "weight": 0
+    },
+    {
+      "title": "Phone me",
+      "href": "tel:+447743499249",
+      "icon": "FaMobileAlt",
+      "weight": 1
+    },
+    {
+      "title": "GitHub",
+      "href": "https://www.github.com/MindeVieras",
+      "icon": "FaGithub",
+      "target": "_blank",
+      "weight": 2
+    },
+    {
+      "title": "LinkedIn",
+      "href": "https://gb.linkedin.com/in/minde-vieras-3a4637129",
+      "icon": "FaLinkedin",
+      "target": "_blank",
+      "weight": 3
+    },
+    {
+      "title": "Download CV",
+      "href": "/cv/CV-Minde-Vieras.pdf",
+      "icon": "FaDownload",
+      "target": "_blank",
+      "weight": 4
     }
   ]
 }

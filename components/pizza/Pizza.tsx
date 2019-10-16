@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import WebFont from 'webfontloader';
 
-import PizzaFooter from './PizzaFooter';
 import PizzaCenter from './PizzaCenter';
 import PizzaPieces from './PizzaPieces';
 
@@ -57,17 +56,15 @@ class Pizza extends Component<PizzaProps> {
           height={height}
           xmlns="http://www.w3.org/2000/svg"
         >
+          <PizzaCenter {...centerDimensions} {...center} />
+
           <PizzaPieces
             pieces={pieces}
             svgWidth={width}
             svgHeight={height}
             centerDimensions={centerDimensions}
           />
-
-          <PizzaCenter {...centerDimensions} {...center} />
         </svg>
-
-        <PizzaFooter />
 
         {/* {{#each sections}} */}
         {/* <dialog>{{> pizza/modal}}</dialog> */}
