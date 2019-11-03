@@ -20,7 +20,7 @@
   "homepage": "https://github.com/MindeVieras/portfolio#readme",
   "dependencies": {
     "bootstrap": "^4.2.1",
-    "handlebars": "^4.0.12",
+    "handlebars": "^4.1.2",
     "handlebars-loader": "^1.7.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.6",
