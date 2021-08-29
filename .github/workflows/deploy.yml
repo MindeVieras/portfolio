@@ -20,8 +20,8 @@ jobs:
             git pull
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-            nvm install 12.22.5
-            nvm use 12.22.5
+            nvm install 14.17.5
+            nvm use 14.17.5
             npm ci
             npm run build
             npm prune --production
