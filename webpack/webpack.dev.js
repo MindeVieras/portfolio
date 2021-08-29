@@ -26,7 +26,7 @@ module.exports = {
       {
         test: /\.hbs$/,
         loader: "handlebars-loader",
-        query: {
+        options: {
           partialDirs: process.cwd()+'/src/js/templates/partials'
         }
       },
