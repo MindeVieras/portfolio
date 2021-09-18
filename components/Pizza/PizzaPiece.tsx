@@ -20,9 +20,7 @@ export const PizzaPiece: FunctionComponent<Props> = ({ pizza, index, totalPieces
   const angle = 360 / totalPieces
   const pieceAngle = angle * index
 
-  const startPoint = Pizza.polarToCartesian(pizza.center.x, pizza.center.y, pizza.circle.r, pieceAngle)
-
-  const pathD = Pizza.describePiece(pizza.center.x, pizza.center.y, pizza.circle.r, pieceAngle, pieceAngle + angle)
+  const pathD = pizza.describePiece(pieceAngle, pieceAngle + angle)
   // let pathD = `M ${startPoint.x} ${startPoint.y}`
   // pathD += `A 128.5 128.5, 0, 0, 1, 706.75 616.7157356136996`
   // // pathD += `L 1285 0`
@@ -39,7 +37,7 @@ export const PizzaPiece: FunctionComponent<Props> = ({ pizza, index, totalPieces
         stroke={fill}
         strokeWidth={5}
       ></path>
-      <circle id="pizza_center_circle" fill='transparent' cx={startPoint.x} cy={startPoint.y} r={5} stroke={'black'}></circle>
+      {/* <circle id="pizza_center_circle" fill='transparent' cx={startPoint.x} cy={startPoint.y} r={5} stroke={'black'}></circle> */}
     </g>
   )
 }

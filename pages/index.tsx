@@ -9,8 +9,8 @@ const Pizza = dynamic(
 )
 
 const Home: NextPage = () => <Pizza
-  // size={{ width: 1000, height: 1000 }}
-  // center={{ x: 100, y: 100 }}
+  // size={{ width: 1000, height: 500 }}
+  // center={{ x: 400, y: 200 }}
   centerPiece={{
     title: 'Minde Vieras',
     image: '/images/logo.png',
