@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Portfolio mindelis.com",
-  "main": "Gruntfile.js",
+  "main": "dist/main.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack/webpack.dev.js",
     "build": "rimraf dist && webpack --config webpack/webpack.build.js --progress",
